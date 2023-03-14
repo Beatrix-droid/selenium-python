@@ -1,0 +1,71 @@
+1678716098509	geckodriver	INFO	Listening on 127.0.0.1:38867
+1678716098513	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "51609" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiled7Wlki"
+Unable to init server: Broadway display type not supported: 1.1.1.1
+8.8.8.8:0
+Error: cannot open display: 1.1.1.1
+8.8.8.8:0
+1678716223579	geckodriver	INFO	Listening on 127.0.0.1:39879
+1678716223584	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "35369" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile5Ankmb"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: No GPUs detected via PCI
+1678716223867	Marionette	INFO	Marionette enabled
+1678716223872	Marionette	INFO	Listening on port 34045
+Read port: 34045
+WebDriver BiDi listening on ws://127.0.0.1:35369
+1678716224001	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile5Ankmb/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:35369/devtools/browser/65a49862-d172-40aa-8dc5-3bb4974ab558
+ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
+1678716318903	geckodriver	INFO	Listening on 127.0.0.1:40023
+1678716318908	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless=new" "--remote-debugging-port" "33859" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile4vwUvw"
+Unable to init server: Broadway display type not supported: 1.1.1.1
+8.8.8.8:0
+Error: cannot open display: 1.1.1.1
+8.8.8.8:0
+1678716424369	geckodriver	INFO	Listening on 127.0.0.1:49129
+1678716424374	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "50357" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile4Wo3za"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: No GPUs detected via PCI
+1678716424645	Marionette	INFO	Marionette enabled
+1678716424649	Marionette	INFO	Listening on port 39719
+Read port: 39719
+WebDriver BiDi listening on ws://127.0.0.1:50357
+1678716424770	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile4Wo3za/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50357/devtools/browser/76b6378d-f8b2-461f-bf94-4d944ce8a83c
+ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
+1678785630117	geckodriver	INFO	Listening on 127.0.0.1:58323
+1678785912471	geckodriver	INFO	Listening on 127.0.0.1:60927
+1678785963486	geckodriver	INFO	Listening on 127.0.0.1:46161
+1678786426537	geckodriver	INFO	Listening on 127.0.0.1:49139
+1678786426544	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "47339" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilecSJv1u"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: No GPUs detected via PCI
+1678786426889	Marionette	INFO	Marionette enabled
+1678786426895	Marionette	INFO	Listening on port 43037
+Read port: 43037
+WebDriver BiDi listening on ws://127.0.0.1:47339
+1678786427032	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilecSJv1u/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:47339/devtools/browser/40fcae5d-2c53-4729-943b-5e8ed679639c
+ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
+1678798207728	geckodriver	INFO	Listening on 127.0.0.1:49183
+1678798281174	geckodriver	INFO	Listening on 127.0.0.1:37201
