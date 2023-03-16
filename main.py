@@ -43,9 +43,15 @@ password=browser.find_element(By.CSS_SELECTOR, "#password")
 password.send_keys(credentials["password"])
 email.send_keys(credentials["username"])
 
-#submit form   .fab-Button--width100   
-buttons=browser.find_element(By.TAG_NAME, "button")
-submit_button=buttons.find_element(By.XPATH,"//button[@type='submit']")
+#submit form 
+submit_button=browser.find_element(By.XPATH,"//button[@type='submit']")
 submit_button.click()
-
+#confirm tp user we have logged in
 print("succesfully logged in!")
+
+#locate my "my timesheet" button and click on it
+timesheet_link=browser.find_element(By.LINK_TEXT, "My Timesheet").click()
+
+print("opened by time sheet")
+
+    
