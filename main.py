@@ -2,7 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from config import credentials
-from datetime import datetime
+from datetime import date
+from calendar import monthrange
 
 #initialise browser
 options = Options()
@@ -12,17 +13,39 @@ browser = webdriver.Firefox(options=options)
 
 
 #check if it is friday or the end of the month:
+"""
+current_day = date.today()
+print(current_day)
 
-today = date.today()
-print(today)
+if current_day.strftime("%A")== "Friday":
+    print("running the crontab")
+else:
+    print(current_day.strftime("%A"))
+
+
+if current_day.day==monthrange(current_day.year, current_day.month)[1]:
+    print("hello")
+print(monthrange(current_day.year, current_day.month), current_day.day)
+"""
+
 # go to login portal
 browser.get('https://softwareinstitute.bamboohr.com/login.php')
-js-normalLoginLink
+
 # click 'login' with email and password:
-buttons=driver.find_element(By.TAG_NAME, 'button')
-button=buttons.find_element(By.ClASS_NAME, "js-normalLoginLink").click()
+
+classic_login=browser.find_element(By.CSS_SELECTOR,".fab-link").click()
 
 
-# type in username and password:
-inputs=driver.find_element(By.TAG_NAME, "input")
-email= inputs.find_element().send_keys(credentials["username"])
+# identify login form:
+email= browser.find_element(By.CSS_SELECTOR, "#lemail")
+password=browser.find_element(By.CSS_SELECTOR, "#password")
+#type into form
+password.send_keys(credentials["password"])
+email.send_keys(credentials["username"])
+
+#submit form   .fab-Button--width100   
+buttons=browser.find_element(By.TAG_NAME, "button")
+submit_button=buttons.find_element(By.XPATH,"//button[@type='submit']")
+submit_button.click()
+
+print("succesfully logged in!")
