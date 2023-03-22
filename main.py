@@ -29,7 +29,11 @@ print(monthrange(current_day.year, current_day.month), current_day.day)
 #initialise browser
 options= FirefoxOptions()
 browser=start_firefox('https://softwareinstitute.bamboohr.com/login.php', options=options, headless=True)
+spans=browser.find_elements(By.TAG_NAME, "span")
 
+text_spans= [span.text for span in spans]
+if "Log in with SAML" in text_spans:
+    print("page loaded correctly")
 # click 'login with email and password':
 click("Log in with Email and Password")
 
