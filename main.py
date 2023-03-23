@@ -96,8 +96,6 @@ if "Timesheet" not in h3_text:
 assert "Timesheet" in h3_text, "timesheet page not found"
 
 
-day="Mon"
-
 #click on the time entries
 time_entries=browser.find_elements(By.CLASS_NAME, "Timesheet_Slat__addEntryLink")
 link_text=[time_entry.text for time_entry in time_entries]
