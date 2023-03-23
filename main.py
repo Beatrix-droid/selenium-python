@@ -46,45 +46,54 @@ spans = browser.find_elements(By.TAG_NAME, "span")
 text_spans = [span.text for span in spans]
 
 page_has_loaded = bool("Log in with SAML" in text_spans)
-assert page_has_loaded == True, "Error page not loaded correctly"
 
-if page_has_loaded==False:
-   browser.save_screenshot("login_page.png")
+if page_has_loaded == False:
+    browser.save_screenshot("login_page.png")
+assert page_has_loaded == True, "Error page not loaded correctly"
 
 
 # click 'login with email and password':
 click("Log in with Email and Password")
 
+
 # identify login form and check that it has loaded correctly:
 email = browser.find_element(By.CSS_SELECTOR, "#lemail")
 password = browser.find_element(By.CSS_SELECTOR, "#password")
-submit_button=browser.find_element(By.XPATH,"//span[text()='Log In']")
+submit_button = browser.find_element(By.XPATH, "//span[text()='Log In']")
 
-assert submit_button and  password and email, "Error page not loaded correctly"
-if submit_button==False or email==False or password==False:
+if submit_button == False or email == False or password == False:
     browser.save_screenshot("no_submit_btn.png")
+assert submit_button and password and email, "Error page not loaded correctly"
+
 
 # type into form
 email.send_keys(credentials["username"])
 password.send_keys(credentials["password"])
 
+
 # Submit form
 submit_button.click()
 # content = driver.find_element(By.CSS_SELECTOR, 'p.content')  to locate by class
 
-browser.save_screenshot("image.png")
+
 # confirm to user we have logged in
-links = browser.find_element(By.CLASS_NAME, "MyInfoWidget__title")
+my_name = browser.find_element(By.XPATH, "//span[text()='Beatrice Federici']")
 
-
-#print(Text("My Time").exists())
-#print("succesfully logged in!")
+if my_name == False:
+    browser.save_screenshot("home_page_not_found.png")
+assert my_name, " homepage not loaded correctly"
 
 # locate my "my timesheet" button and click on it
-#click("My Timesheet")
-# confirm that the timesheet was opened
-#assert Text("Timesheet").exists()
-#print("opened by time sheet")
+my_timesheet = browser.find_element(By.LINK_TEXT, "My Timesheet")
+my_timesheet.click()
+
+# check that we have navigated to the timesheet page:
+h3_tags = browser.find_elements(By.TAG_NAME, "h3")
+
+h3_text = [tag.text for tag in h3_tags]
+if "Timesheet" not in h3_text:
+    browser.save_screenshot("timesheet_not_found.png")
+assert "Timesheet" in h3_text, "timesheet page not found"
 
 
 # begin filling in the work hours
