@@ -96,18 +96,27 @@ if "Timesheet" not in h3_text:
 assert "Timesheet" in h3_text, "timesheet page not found"
 
 
+day="Mon"
+
+#click on the time entries
+time_entries=browser.find_elements(By.CLASS_NAME, "Timesheet_Slat__addEntryLink")
+link_text=[time_entry.text for time_entry in time_entries]
+print(link_text)
+browser.save_screenshot(("time.png"))
+
 # begin filling in the work hours
 week = ["Mon", "Tue", "Wed", "Thur", "Fri"]
-for day in week:
-    click(day)
-    click("Add Time Entry")
-    if Text("Day Total: 7h 30m").exists() or Text("Day Total: 8h").exists():
-        click("Cancel")  # if there are alreaddy hrs logged in skip
+#for day in week:
+    #click the day you need to fill in:
+#browser.find_element(By.XPATH, f"//span[text()='{day}']")
+ #   click("Add Time Entry")
+  #  if Text("Day Total: 7h 30m").exists() or Text("Day Total: 8h").exists():
+   #     click("Cancel")  # if there are alreaddy hrs logged in skip
 
-    else:  # log the hours and click save
-        write("7.5")
-        click("--Select Project/Task--")
-        click("Liberty Global Automation & AI")
-        click("Save")
-        # confirm that we are back to the timesheet page
-        assert Text("Timesheet").exists()
+    #else:  # log the hours and click save
+      #  write("7.5")
+     #   click("--Select Project/Task--")
+       # click("Liberty Global Automation & AI")
+        #click("Save")
+        ## confirm that we are back to the timesheet page
+        #assert Text("Timesheet").exists()
