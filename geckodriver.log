@@ -1445,3 +1445,55 @@ A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
 Exiting due to channel error.
 A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
 1679044611177	geckodriver	INFO	Listening on 127.0.0.1:34971
+1679580363997	geckodriver	INFO	Listening on 127.0.0.1:60253
+1679580447720	geckodriver	INFO	Listening on 127.0.0.1:40669
+1679580456512	geckodriver	INFO	Listening on 127.0.0.1:60333
+1679580511118	geckodriver	INFO	Listening on 127.0.0.1:41525
+1679580665396	geckodriver	INFO	Listening on 127.0.0.1:52443
+1679580665403	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless=new" "-no-remote" "-profile" "/tmp/rust_mozprofileAbhC1W"
+Error: no DISPLAY environment variable specified
+1679580727145	geckodriver	INFO	Listening on 127.0.0.1:50049
+1679580727151	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless=new" "-no-remote" "-profile" "/tmp/rust_mozprofilefOKrVk"
+Error: no DISPLAY environment variable specified
+1679580759969	geckodriver	INFO	Listening on 127.0.0.1:33013
+1679580759977	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless=new" "-no-remote" "-profile" "/tmp/rust_mozprofileE6vE41"
+Error: no DISPLAY environment variable specified
+1679580776967	geckodriver	INFO	Listening on 127.0.0.1:55623
+1679580776973	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless=new" "-no-remote" "-profile" "/tmp/rust_mozprofileOlzn1J"
+Error: no DISPLAY environment variable specified
+1679580860002	geckodriver	INFO	Listening on 127.0.0.1:51551
+1679580860009	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-no-remote" "-profile" "/tmp/rust_mozprofileABXwIR"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: No GPUs detected via PCI
+1679580860320	Marionette	INFO	Marionette enabled
+1679580860324	Marionette	INFO	Listening on port 37827
+Read port: 37827
+1679580860482	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileABXwIR/search.json.mozlz4", (void 0)))
+ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
+1679580883836	geckodriver	INFO	Listening on 127.0.0.1:50201
+1679580883842	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-no-remote" "-profile" "/tmp/rust_mozprofile5zMHum"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: No GPUs detected via PCI
+1679580884156	Marionette	INFO	Marionette enabled
+1679580884162	Marionette	INFO	Listening on port 33039
+Read port: 33039
+1679580884310	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile5zMHum/search.json.mozlz4", (void 0)))
+ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
+console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
