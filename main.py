@@ -100,9 +100,15 @@ browser.maximize_window()
 # this will be for link in links, but it ammounts to finding the "add time entry" link
 links = time_sheet_form.find_elements(By.TAG_NAME, "a")
 
-for link in links:
+days_objs=browser.find_elements(By.CLASS_NAME, "TimesheetSlat__dayOfWeek")
+week=[day.text for day in days_objs]
+
+for i in range(len(links) -1):
     sleep(2)
-    link.click()
+    links[i].click()
+
+    if week[i]=="Sun" or week[i]=="Sat":
+        continue
     
     # check how many hours you have worked for that particular day
     day_total = browser.find_element(By.CLASS_NAME, "AddEditEntry__dayTotal")
@@ -130,7 +136,7 @@ for link in links:
             By.CSS_SELECTOR, ".fab-MenuOption__row"
         ).click()
         save_button.click()
-        if links.index(link) == (len(links) - 1):
+        if i == (len(links) - 1):
             print("time sheet filled")
     else:
         cancel_button.click()
