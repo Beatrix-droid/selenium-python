@@ -1,556 +1,360 @@
-1679589367953	geckodriver	INFO	Listening on 127.0.0.1:42871
-1679589367961	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "54499" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileW5SDbc"
+1679919236392	geckodriver	INFO	Listening on 127.0.0.1:44949
+1679919236398	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "52057" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilejJykL1"
 *** You are running in headless mode.
 console.warn: services.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
 [GFX1-]: glxtest: libpci missing
 [GFX1-]: glxtest: libGL.so.1 missing
 [GFX1-]: No GPUs detected via PCI
-1679589369923	Marionette	INFO	Marionette enabled
-1679589369930	Marionette	INFO	Listening on port 39257
-Read port: 39257
-WebDriver BiDi listening on ws://127.0.0.1:54499
-1679589370375	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1679919236718	Marionette	INFO	Marionette enabled
+1679919236722	Marionette	INFO	Listening on port 43901
+Read port: 43901
+WebDriver BiDi listening on ws://127.0.0.1:52057
+1679919236899	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
 console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileW5SDbc/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:54499/devtools/browser/0dc35716-9e8a-49d4-8df7-2e03d884f99c
-ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
-console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilejJykL1/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52057/devtools/browser/934de6fd-65ca-4cf1-81ef-1dab216ba7bc
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-1679592273616	geckodriver	INFO	Listening on 127.0.0.1:57497
-1679592273621	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "54151" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile6nRalf"
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1679919245434	Marionette	INFO	Stopped listening on port 43901
+[Parent 18655, IPC I/O Parent] WARNING: process 18939 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:828:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+console.error: "TelemetryScheduler.shutdown - Already shut down"
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:828:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:828:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  TelemetryController: shutting down
+          Phase: profile-before-change-telemetry
+          State: Error getting state: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange" at addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:828:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:828:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+1679919264486	geckodriver	INFO	Listening on 127.0.0.1:60385
+1679919264492	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "60067" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilecnKjXr"
 *** You are running in headless mode.
 console.warn: services.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
 [GFX1-]: glxtest: libpci missing
 [GFX1-]: glxtest: libGL.so.1 missing
 [GFX1-]: No GPUs detected via PCI
-1679592273905	Marionette	INFO	Marionette enabled
-1679592273910	Marionette	INFO	Listening on port 45307
-Read port: 45307
-WebDriver BiDi listening on ws://127.0.0.1:54151
-1679592274072	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1679919264885	Marionette	INFO	Marionette enabled
+1679919264891	Marionette	INFO	Listening on port 39671
+Read port: 39671
+WebDriver BiDi listening on ws://127.0.0.1:60067
+1679919265097	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
 console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile6nRalf/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:54151/devtools/browser/65b831c2-a46a-4aaa-b0f5-51fa081826dc
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
-1679592417297	geckodriver	INFO	Listening on 127.0.0.1:57965
-1679592417303	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "56865" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileHKuYJj"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679592417643	Marionette	INFO	Marionette enabled
-1679592417647	Marionette	INFO	Listening on port 45541
-Read port: 45541
-WebDriver BiDi listening on ws://127.0.0.1:56865
-1679592417841	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileHKuYJj/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:56865/devtools/browser/0a6b0929-fb24-47c4-aa22-f79cb97444b6
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
-console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
-console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-1679663303201	geckodriver	INFO	Listening on 127.0.0.1:35099
-1679663303587	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "44667" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile5E6x11"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679663305942	Marionette	INFO	Marionette enabled
-1679663305958	Marionette	INFO	Listening on port 41443
-Read port: 41443
-WebDriver BiDi listening on ws://127.0.0.1:44667
-1679663306420	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile5E6x11/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:44667/devtools/browser/9fa8ca86-4588-4e16-9c95-2593d8821a4c
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
-console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
-1679664056172	geckodriver	INFO	Listening on 127.0.0.1:36915
-1679664056177	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "34357" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilesvykYT"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679664056494	Marionette	INFO	Marionette enabled
-1679664056498	Marionette	INFO	Listening on port 34651
-Read port: 34651
-WebDriver BiDi listening on ws://127.0.0.1:34357
-1679664056674	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilesvykYT/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:34357/devtools/browser/82706f6b-c80e-4f4e-8097-d3d3244223e1
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
-1679664083702	geckodriver	INFO	Listening on 127.0.0.1:48657
-1679664083707	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "53105" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilem51OBM"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679664084000	Marionette	INFO	Marionette enabled
-1679664084004	Marionette	INFO	Listening on port 43723
-Read port: 43723
-WebDriver BiDi listening on ws://127.0.0.1:53105
-1679664084216	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilem51OBM/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:53105/devtools/browser/f6e78735-12b4-471a-917e-3b2db74c9547
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
-console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
-console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
-1679665799956	geckodriver	INFO	Listening on 127.0.0.1:40657
-1679665799962	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "54061" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileHalv4T"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679665800322	Marionette	INFO	Marionette enabled
-1679665800326	Marionette	INFO	Listening on port 43761
-Read port: 43761
-WebDriver BiDi listening on ws://127.0.0.1:54061
-1679665800486	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileHalv4T/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:54061/devtools/browser/340e3290-c586-4d78-936d-ae24c25b3c06
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilecnKjXr/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60067/devtools/browser/2ca7d6e7-2b1f-465e-9e64-a2b29c5e61db
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
 ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
-1679665881167	geckodriver	INFO	Listening on 127.0.0.1:33441
-1679665881187	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "42337" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilecEBWLG"
+1679919309007	geckodriver	INFO	Listening on 127.0.0.1:33865
+1679919309013	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "53209" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilek7II6Z"
 *** You are running in headless mode.
 console.warn: services.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
 [GFX1-]: glxtest: libpci missing
 [GFX1-]: glxtest: libGL.so.1 missing
 [GFX1-]: No GPUs detected via PCI
-1679665882012	Marionette	INFO	Marionette enabled
-1679665882028	Marionette	INFO	Listening on port 40565
-Read port: 40565
-WebDriver BiDi listening on ws://127.0.0.1:42337
-1679665882409	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1679919309327	Marionette	INFO	Marionette enabled
+1679919309332	Marionette	INFO	Listening on port 36667
+Read port: 36667
+WebDriver BiDi listening on ws://127.0.0.1:53209
+1679919309502	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
 console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilecEBWLG/search.json.mozlz4", (void 0)))
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-1679665885699	Marionette	INFO	Stopped listening on port 34651
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-1679665886116	Marionette	INFO	Stopped listening on port 43723
-[Parent 8920, IPC I/O Parent] WARNING: process 9124 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-[Parent 8920, IPC I/O Parent] WARNING: process 9122 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-[Parent 8920, IPC I/O Parent] WARNING: process 9191 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-1679665886401	Marionette	INFO	Stopped listening on port 41443
-DevTools listening on ws://127.0.0.1:42337/devtools/browser/e726b1a7-e42f-4082-9a1d-0957117a2aa3
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-[Parent 9539, IPC I/O Parent] WARNING: process 9748 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-[Parent 9539, IPC I/O Parent] WARNING: process 9742 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-[Parent 9539, IPC I/O Parent] WARNING: process 9791 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-[Parent 3674, IPC I/O Parent] WARNING: process 4004 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilek7II6Z/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53209/devtools/browser/234fc29f-10ad-43ac-9e25-da47992f19c1
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
-console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
-console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
-1679667308495	geckodriver	INFO	Listening on 127.0.0.1:49223
-1679667308532	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "38085" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile85GxMU"
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1679919319230	Marionette	INFO	Stopped listening on port 36667
+[Parent 19844, IPC I/O Parent] WARNING: process 20119 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:828:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+console.error: "TelemetryScheduler.shutdown - Already shut down"
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:828:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:828:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  TelemetryController: shutting down
+          Phase: profile-before-change-telemetry
+          State: Error getting state: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange" at addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:828:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:828:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+1679919366538	geckodriver	INFO	Listening on 127.0.0.1:53403
+1679919366559	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "54309" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileR7eqDn"
 *** You are running in headless mode.
 console.warn: services.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
 [GFX1-]: glxtest: libpci missing
 [GFX1-]: glxtest: libGL.so.1 missing
 [GFX1-]: No GPUs detected via PCI
-1679667308931	Marionette	INFO	Marionette enabled
-1679667308935	Marionette	INFO	Listening on port 40871
-Read port: 40871
-WebDriver BiDi listening on ws://127.0.0.1:38085
-1679667309176	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1679919367070	Marionette	INFO	Marionette enabled
+1679919367075	Marionette	INFO	Listening on port 41339
+WebDriver BiDi listening on ws://127.0.0.1:54309
+Read port: 41339
+1679919367272	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
 console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile85GxMU/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:38085/devtools/browser/4c69a9de-d0d4-4c5f-902f-a2bed47631a6
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
-1679667375345	geckodriver	INFO	Listening on 127.0.0.1:51805
-1679667375350	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "56067" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile5LtkZP"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679667375664	Marionette	INFO	Marionette enabled
-1679667375668	Marionette	INFO	Listening on port 43709
-Read port: 43709
-WebDriver BiDi listening on ws://127.0.0.1:56067
-1679667375843	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile5LtkZP/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:56067/devtools/browser/6659059c-e68a-47a2-9c29-447526ec05fa
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
-1679667443434	geckodriver	INFO	Listening on 127.0.0.1:36111
-1679667443916	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "41399" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilevXBEXh"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679667444262	Marionette	INFO	Marionette enabled
-1679667444269	Marionette	INFO	Listening on port 38137
-Read port: 38137
-WebDriver BiDi listening on ws://127.0.0.1:41399
-1679667444539	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-1679667445969	Marionette	INFO	Stopped listening on port 40565
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-[Parent 21347, IPC I/O Parent] WARNING: process 21626 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-[Parent 21347, IPC I/O Parent] WARNING: process 21635 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilevXBEXh/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:41399/devtools/browser/c2ffb322-6402-45bf-9e24-da57261c0209
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileR7eqDn/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54309/devtools/browser/5e879f29-ff63-4334-908c-2f3a8027a937
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
 A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-1679667455764	Marionette	INFO	Stopped listening on port 40871
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-[Parent 30596, IPC I/O Parent] WARNING: process 30875 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-[Parent 30596, IPC I/O Parent] WARNING: process 30835 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
-console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
-console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
-1679668054589	geckodriver	INFO	Listening on 127.0.0.1:56613
-1679668054622	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "39705" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileVuXSrd"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679668055261	Marionette	INFO	Marionette enabled
-1679668055267	Marionette	INFO	Listening on port 41999
-Read port: 41999
-WebDriver BiDi listening on ws://127.0.0.1:39705
-1679668055629	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileVuXSrd/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:39705/devtools/browser/326f9b30-77f2-4d52-a1c5-65e27b74321e
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-1679668064556	Marionette	INFO	Stopped listening on port 41999
-[Parent 4128, IPC I/O Parent] WARNING: process 4398 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-1679668097127	geckodriver	INFO	Listening on 127.0.0.1:53599
-1679668097623	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "55473" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile1uHBkP"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679668098184	Marionette	INFO	Marionette enabled
-1679668098189	Marionette	INFO	Listening on port 44451
-Read port: 44451
-WebDriver BiDi listening on ws://127.0.0.1:55473
-1679668098449	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile1uHBkP/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:55473/devtools/browser/62064428-a109-4990-8cca-8cfbac0ac5d2
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-1679668106778	Marionette	INFO	Stopped listening on port 44451
-1679668106872	Marionette	INFO	Stopped listening on port 38137
-[Parent 4819, IPC I/O Parent] WARNING: process 4997 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-[Parent 32273, IPC I/O Parent] WARNING: process 32510 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-1679668363007	geckodriver	INFO	Listening on 127.0.0.1:42429
-1679668363502	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "42565" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile7QBLCU"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679668363888	Marionette	INFO	Marionette enabled
-1679668363892	Marionette	INFO	Listening on port 33757
-Read port: 33757
-WebDriver BiDi listening on ws://127.0.0.1:42565
-1679668364066	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile7QBLCU/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:42565/devtools/browser/56f9b0fb-1d73-4f5f-aaee-bcb924e7f6d1
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
-1679668389146	geckodriver	INFO	Listening on 127.0.0.1:54419
-1679668389152	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "33727" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileGVjyce"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679668389458	Marionette	INFO	Marionette enabled
-1679668389463	Marionette	INFO	Listening on port 44945
-Read port: 44945
-WebDriver BiDi listening on ws://127.0.0.1:33727
-1679668389696	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileGVjyce/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:33727/devtools/browser/a0ba4ed3-8e83-4446-9247-8005897006a3
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-1679668399156	Marionette	INFO	Stopped listening on port 33757
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-[Parent 6774, IPC I/O Parent] WARNING: process 7004 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-[Parent 6774, IPC I/O Parent] WARNING: process 6954 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-1679668399572	Marionette	INFO	Stopped listening on port 44945
-1679668399591	Marionette	INFO	Stopped listening on port 43709
-[Parent 7281, IPC I/O Parent] WARNING: process 7539 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-[Parent 31451, IPC I/O Parent] WARNING: process 31668 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-1679668420075	geckodriver	INFO	Listening on 127.0.0.1:49279
-1679668420097	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "40771" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileD9R9wJ"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679668420705	Marionette	INFO	Marionette enabled
-1679668420717	Marionette	INFO	Listening on port 36487
-Read port: 36487
-WebDriver BiDi listening on ws://127.0.0.1:40771
-1679668420993	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileD9R9wJ/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:40771/devtools/browser/5f7923c1-5ffc-4e70-beda-a55e19e149f1
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
-1679668696911	geckodriver	INFO	Listening on 127.0.0.1:33757
-1679668696916	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "41903" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileUsASDO"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679668697225	Marionette	INFO	Marionette enabled
-1679668697229	Marionette	INFO	Listening on port 37277
-Read port: 37277
-WebDriver BiDi listening on ws://127.0.0.1:41903
-1679668697403	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileUsASDO/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:41903/devtools/browser/2309f51e-6d33-4c94-ba97-8179221bc505
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
-console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
-1679668881514	geckodriver	INFO	Listening on 127.0.0.1:57207
-1679668882004	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "52279" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileaU1ZDx"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679668882318	Marionette	INFO	Marionette enabled
-1679668882322	Marionette	INFO	Listening on port 44323
-Read port: 44323
-WebDriver BiDi listening on ws://127.0.0.1:52279
-1679668882517	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileaU1ZDx/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:52279/devtools/browser/8cd5815c-0b3a-438f-b947-64edd84aca09
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-1679668890217	Marionette	INFO	Stopped listening on port 37277
-[Parent 10366, IPC I/O Parent] WARNING: process 10597 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
-1679669092680	geckodriver	INFO	Listening on 127.0.0.1:52719
-1679669092690	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "43063" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile906jBU"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679669093226	Marionette	INFO	Marionette enabled
-1679669093245	Marionette	INFO	Listening on port 41731
-Read port: 41731
-WebDriver BiDi listening on ws://127.0.0.1:43063
-1679669093535	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile906jBU/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:43063/devtools/browser/1b764dea-6424-4f91-a9bf-2d46a0c955d7
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-1679669100389	Marionette	INFO	Stopped listening on port 44323
-[Parent 11917, IPC I/O Parent] WARNING: process 12120 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
-1679669120823	geckodriver	INFO	Listening on 127.0.0.1:43281
-1679669120830	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "45843" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileJjVqkR"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679669121438	Marionette	INFO	Marionette enabled
-1679669121442	Marionette	INFO	Listening on port 46681
-Read port: 46681
-WebDriver BiDi listening on ws://127.0.0.1:45843
-1679669121690	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileJjVqkR/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:45843/devtools/browser/6379ff58-98a5-4189-b16b-294dbddfe752
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-1679669130313	Marionette	INFO	Stopped listening on port 41731
-1679669130445	Marionette	INFO	Stopped listening on port 46681
-ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
-[Parent 13596, IPC I/O Parent] WARNING: process 13897 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-[Parent 14237, IPC I/O Parent] WARNING: process 14434 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-1679669141335	geckodriver	INFO	Listening on 127.0.0.1:36933
-1679669141420	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "49835" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileRAvQIq"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679669142091	Marionette	INFO	Marionette enabled
-1679669142095	Marionette	INFO	Listening on port 40077
-Read port: 40077
-WebDriver BiDi listening on ws://127.0.0.1:49835
-1679669142279	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileRAvQIq/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:49835/devtools/browser/9916bc17-9096-4ad4-a386-4b0a07424d4e
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
-1679669303812	geckodriver	INFO	Listening on 127.0.0.1:54717
-1679669303818	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "40055" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilewNdYwV"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679669304152	Marionette	INFO	Marionette enabled
-1679669304157	Marionette	INFO	Listening on port 39549
-Read port: 39549
-WebDriver BiDi listening on ws://127.0.0.1:40055
-1679669304314	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilewNdYwV/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:40055/devtools/browser/954faa36-b928-4157-9887-ae68e309514d
-Exiting due to channel error.
-Exiting due to channel error.
-Exiting due to channel error.
-Exiting due to channel error.
-Exiting due to channel error.
-Exiting due to channel error.
-1679669324080	geckodriver	INFO	Listening on 127.0.0.1:55461
-1679669324085	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "35497" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilezVlou5"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679669324391	Marionette	INFO	Marionette enabled
-1679669324395	Marionette	INFO	Listening on port 46293
-Read port: 46293
-WebDriver BiDi listening on ws://127.0.0.1:35497
-1679669324615	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilezVlou5/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:35497/devtools/browser/46fceaee-6dac-43d5-bcbb-2f9678765b53
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
-1679669330921	Marionette	INFO	Stopped listening on port 46293
-1679669331047	Marionette	INFO	Stopped listening on port 40077
-[Parent 16492, IPC I/O Parent] WARNING: process 16754 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-[Parent 14738, IPC I/O Parent] WARNING: process 14938 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
-1679669402388	geckodriver	INFO	Listening on 127.0.0.1:48987
-1679669402399	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "48047" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileDrENoc"
-*** You are running in headless mode.
-console.warn: services.settings: Ignoring preference override of remote settings server
-console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-[GFX1-]: glxtest: libpci missing
-[GFX1-]: glxtest: libGL.so.1 missing
-[GFX1-]: No GPUs detected via PCI
-1679669402703	Marionette	INFO	Marionette enabled
-1679669402709	Marionette	INFO	Listening on port 44423
-Read port: 44423
-WebDriver BiDi listening on ws://127.0.0.1:48047
-1679669402908	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.error: ({})
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileDrENoc/search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:48047/devtools/browser/02f4b5f5-741a-43c2-a02e-c54b92580df6
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
-ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
-console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+1679919376803	Marionette	INFO	Stopped listening on port 39671
+[Parent 19169, IPC I/O Parent] WARNING: process 19447 exited on signal 9: file /build/firefox-eMhuzb/firefox-111.0+build2/ipc/chromium/src/base/process_util_posix.cc:266
+1679919380134	Marionette	INFO	Stopped listening on port 41339
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:828:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+console.error: "TelemetryScheduler.shutdown - Already shut down"
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:828:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Waiting for ping task
+          Phase: TelemetryController: Waiting for pending ping activity
+          State: (none)
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:828:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  TelemetryController: shutting down
+          Phase: profile-before-change-telemetry
+          State: Error getting state: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange" at addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:828:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:828:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
