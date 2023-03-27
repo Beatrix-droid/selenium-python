@@ -157,3 +157,11 @@ browser.quit()
 # click("Save")
 # confirm that we are back to the timesheet page
 # assert Text("Timesheet").exists()
+
+
+#to do:
+#  configure the wait for clicable element in python
+# do the logic for not filling in the sheet on weekends
+#double check that the calendar logic works
+# configure the github action to fill the worksheet
+# double check the screenshot logic
