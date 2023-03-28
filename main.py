@@ -2,6 +2,8 @@ from datetime import date
 from calendar import monthrange
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.service import Service
+from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.common.by import By
 
 from time import sleep
@@ -31,6 +33,9 @@ print(monthrange(current_day.year, current_day.month), current_day.day)
 options = Options()
 options.binary_location = "/usr/bin/firefox"
 options.add_argument("--headless")
+options.add_argument("start-maximized")
+options.add_argument("detach")
+#service=Service(GeckoDriverManager().install())
 
 
 # initialise an instance of the browser
@@ -96,53 +101,57 @@ assert "Timesheet" in h3_text, "timesheet page not found" and browser.save_scree
 
 # click on the time entries
 time_sheet_form = browser.find_element(By.TAG_NAME, "form")
-browser.maximize_window()
+
 # this will be for link in links, but it ammounts to finding the "add time entry" link
 links = time_sheet_form.find_elements(By.TAG_NAME, "a")
 
 days_objs=browser.find_elements(By.CLASS_NAME, "TimesheetSlat__dayOfWeek")
 week=[day.text for day in days_objs]
+# mane timesheet page here
 
-for i in range(len(links) -1):
+browser.save_full_page_screenshot("before.png")
+for link in links:
+ 
+
+    # wait to be back on the main page
+   
+    #link.location_once_scrolled_into_view
+   
     sleep(2)
-    links[i].click()
-
-    if week[i]=="Sun" or week[i]=="Sat":
+    link.click()
+    browser.save_full_page_screenshot("after.png")
+   
+    
+    index_no= links.index(link)
+  
+    if week[index_no]=="Sun" or week[index_no]=="Sat":
         continue
     
     # check how many hours you have worked for that particular day
+    
     day_total = browser.find_element(By.CLASS_NAME, "AddEditEntry__dayTotal")
-
-    assert day_total, (
-        "form for filling in hours not loaded correctly"
-        and browser.save_full_page_screenshot("hours+worked_form_not_found.pmg")
-    )
-
     hours_worked = day_total.text
+   
+    
 
     # locate input box and drop down menu, as well as the buttons
     input_box = browser.find_element(By.ID, "hoursWorked")
-    drop_down = browser.find_element(
-        By.XPATH, "//div[text()='--Select Project/Task--']"
-    )
+    drop_down = browser.find_element(By.XPATH, "//div[text()='--Select Project/Task--']")
     save_button = browser.find_element(By.XPATH, "//span[text()='Save']")
-    cancel_button = browser.find_element(By.XPATH, "//span[text()='Cancel']")
-
-    # fill in time sheet if hours worked appear 0:
+   
+    # fill in time sheet if hours worked appear 0: 
     if hours_worked == "Day Total: 0h 00m":
         input_box.send_keys("7.5")
-        drop_down.click()
-        select_automation = browser.find_element(
-            By.CSS_SELECTOR, ".fab-MenuOption__row"
-        ).click()
-        save_button.click()
-        if i == (len(links) - 1):
-            print("time sheet filled")
-    else:
-        cancel_button.click()
-        continue
+    
+    # make sure to always indicate the automation and ai department and save the options
+    drop_down.click()
+    department = browser.find_element(By.CSS_SELECTOR, ".fab-MenuOption__row").click()
+    save_button.click()
+
+    if index_no == (len(links) - 1):
+        print("time sheet filled")
 browser.save_full_page_screenshot("timesheet.png")
-browser.quit()
+browser.close()
 
 # hours=browser.find_element(By.XPATH, "//div[text()='Day Total: 7h 30m']")
 
