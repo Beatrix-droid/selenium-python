@@ -14,8 +14,6 @@ jobs:
           python-version: '3.10.4'
       - name: Installed package list
         run: apt list --installed
-      - name: Remove Chrome
-        run: sudo apt purge google-chrome-stable
       - name: Remove default firefox
         run: sudo apt purge firefox
       - name: Install a new firefox
@@ -27,5 +25,5 @@ jobs:
             update-pip: "false"
             update-setuptools: "false"
             update-wheel: "false"
-      - name: Run the scraping script
+      - name: Run the automation script
         run: python main.py
