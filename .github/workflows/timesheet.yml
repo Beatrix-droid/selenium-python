@@ -1,7 +1,6 @@
 name: automate_time_sheet
 on:
-  schedule:
-    -cron:"0 11 * * * "
+  schedule: -cron:"0 11 * * * "
 jobs:
   automate_time_sheet:
     runs-on: ubuntu-latest
@@ -11,7 +10,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.10.4'
+          python-version: 3.10.4
       - name: Installed package list
         run: apt list --installed
       - name: Remove default firefox
@@ -21,9 +20,9 @@ jobs:
       - name: Install all the dependencies
         uses: py-actions/py-dependency-install@v4
         with:
-          path: "requirements.txt"
-            update-pip: "false"
-            update-setuptools: "false"
-            update-wheel: "false"
+          path: requirements.txt
+          update-pip: "false"
+          update-setuptools: "false"
+          update-wheel: "false"
       - name: Run the automation script
         run: python main.py
