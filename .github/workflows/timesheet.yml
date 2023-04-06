@@ -5,6 +5,8 @@ on:
 jobs:
   automate_time_sheet:
     runs-on: ubuntu-latest
+    environment: 
+      name: production
     steps:
       - name: Check out this repo
         uses: actions/checkout@v2
@@ -26,4 +28,7 @@ jobs:
           update-setuptools: "false"
           update-wheel: "false"
       - name: Run the automation script
+        env:
+           USERNAME: ${{ secrets.USERNAME }}
+           PASSWORD: ${{ secrets.PASSWORD }}
         run: python main.py
