@@ -5,6 +5,10 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from config import credentials
+import os
+
+USER_NAME=os.environ("USERNAME")
+USER_PASSWORD=os.getenv("PASSWORD")
 
 # initialise browser
 # wait.until(ExpectedConditions.elementToBeClickable(By.id("Login")));
@@ -60,8 +64,8 @@ if (current_day.strftime("%A")== "Friday") or (current_day.day==monthrange(curre
 
 
     # type into form
-    email.send_keys(credentials["username"])
-    password.send_keys(credentials["password"])
+    email.send_keys(USER_NAME)
+    password.send_keys(USER_PASSWORD)
 
     # Submit form
     submit_button.click()
