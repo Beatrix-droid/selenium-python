@@ -5,8 +5,8 @@ on:
 jobs:
   automate_time_sheet:
     runs-on: ubuntu-latest
-    environment: 
-      name: production
+    environment: production
+    name: open repo
     steps:
       - name: Check out this repo
         uses: actions/checkout@v2
