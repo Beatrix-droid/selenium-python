@@ -7,8 +7,8 @@ from selenium.webdriver.common.by import By
 
 import os
 
-USER_NAME=os.environ("USERNAME")
-USER_PASSWORD=os.getenv("PASSWORD")
+USER_NAME=os.environ["USERNAME"]
+USER_PASSWORD=os.environ["PASSWORD"]
 
 # initialise browser
 # wait.until(ExpectedConditions.elementToBeClickable(By.id("Login")));
