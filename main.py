@@ -4,7 +4,7 @@ from time import sleep
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
-from config import credentials
+
 import os
 
 USER_NAME=os.environ("USERNAME")
