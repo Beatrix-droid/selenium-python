@@ -2469,3 +2469,216 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
 ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
 console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+1680965805074	geckodriver	INFO	Listening on 127.0.0.1:38357
+1680965923674	geckodriver	INFO	Listening on 127.0.0.1:41179
+1680966117929	geckodriver	INFO	Listening on 127.0.0.1:53707
+1680966118434	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ch" "--remote-debugging-port" "40823" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileEga5Mp"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: No GPUs detected via PCI
+1680966118981	Marionette	INFO	Marionette enabled
+1680966118985	Marionette	INFO	Listening on port 40825
+Read port: 40825
+WebDriver BiDi listening on ws://127.0.0.1:40823
+1680966119271	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileEga5Mp/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:40823/devtools/browser/b36394e4-d682-4e87-8471-8b4c827bb7e1
+ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
+1680966206210	geckodriver	INFO	Listening on 127.0.0.1:51793
+1680966206715	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ch" "--remote-debugging-port" "34835" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileNIXWwn"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: No GPUs detected via PCI
+1680966207049	Marionette	INFO	Marionette enabled
+1680966207054	Marionette	INFO	Listening on port 36217
+Read port: 36217
+WebDriver BiDi listening on ws://127.0.0.1:34835
+1680966207224	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileNIXWwn/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:34835/devtools/browser/c73055a1-8892-4f44-b3c3-a271400ba40f
+ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
+1680966325537	geckodriver	INFO	Listening on 127.0.0.1:45643
+1680966326041	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ch" "--remote-debugging-port" "46467" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilefpoBo1"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: No GPUs detected via PCI
+1680966326413	Marionette	INFO	Marionette enabled
+1680966326417	Marionette	INFO	Listening on port 46093
+Read port: 46093
+WebDriver BiDi listening on ws://127.0.0.1:46467
+1680966326610	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilefpoBo1/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:46467/devtools/browser/1d138806-0018-45d9-bde0-e24dd1fdaf96
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
+console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+1680966630743	geckodriver	INFO	Listening on 127.0.0.1:52127
+1680966631234	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ch" "--remote-debugging-port" "49487" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilexo5WeZ"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: No GPUs detected via PCI
+1680966632849	Marionette	INFO	Marionette enabled
+1680966632866	Marionette	INFO	Listening on port 42529
+Read port: 42529
+WebDriver BiDi listening on ws://127.0.0.1:49487
+1680966633453	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilexo5WeZ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49487/devtools/browser/ed84f87d-a3b3-4f67-a7ec-15a49d6c28b0
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1680966638987	Marionette	INFO	Stopped listening on port 42529
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 14977, IPC I/O Parent] WARNING: process 15312 exited on signal 9: file /build/firefox-wmvuWv/firefox-111.0.1+build2/ipc/chromium/src/base/process_util_posix.cc:266
+1680966639220	Marionette	INFO	Stopped listening on port 36217
+1680966639325	Marionette	INFO	Stopped listening on port 40825
+[Parent 14977, IPC I/O Parent] WARNING: process 15328 exited on signal 9: file /build/firefox-wmvuWv/firefox-111.0.1+build2/ipc/chromium/src/base/process_util_posix.cc:266
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 14977, IPC I/O Parent] WARNING: process 15366 exited on signal 9: file /build/firefox-wmvuWv/firefox-111.0.1+build2/ipc/chromium/src/base/process_util_posix.cc:266
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1680966639501	geckodriver::marionette	ERROR	Failed to close browser connection: Socket not connected (os error 107)
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 11215, IPC I/O Parent] WARNING: process 11472 exited on signal 9: file /build/firefox-wmvuWv/firefox-111.0.1+build2/ipc/chromium/src/base/process_util_posix.cc:266
+[Parent 11215, IPC I/O Parent] WARNING: process 11413 exited on signal 9: file /build/firefox-wmvuWv/firefox-111.0.1+build2/ipc/chromium/src/base/process_util_posix.cc:266
+[Parent 11215, IPC I/O Parent] WARNING: process 11401 exited on signal 9: file /build/firefox-wmvuWv/firefox-111.0.1+build2/ipc/chromium/src/base/process_util_posix.cc:266
+[Parent 10253, IPC I/O Parent] WARNING: process 10460 exited on signal 9: file /build/firefox-wmvuWv/firefox-111.0.1+build2/ipc/chromium/src/base/process_util_posix.cc:266
+[ERROR glean_core] Can't persist ping lifetime data: Error { kind: Rkv(IoError(Os { code: 2, kind: NotFound, message: "No such file or directory" })) }
+1680966670349	geckodriver	INFO	Listening on 127.0.0.1:49065
+1680966670855	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ch" "--remote-debugging-port" "33347" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilecjTVkD"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: No GPUs detected via PCI
+1680966671705	Marionette	INFO	Marionette enabled
+1680966671721	Marionette	INFO	Listening on port 33641
+Read port: 33641
+WebDriver BiDi listening on ws://127.0.0.1:33347
+1680966672409	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilecjTVkD/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:33347/devtools/browser/4f4880a7-6123-4c23-b1b9-4d0f44653550
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
+console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+1680966806786	geckodriver	INFO	Listening on 127.0.0.1:41979
+1680966807290	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ch" "--remote-debugging-port" "58611" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileBH4dXD"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: No GPUs detected via PCI
+1680966808055	Marionette	INFO	Marionette enabled
+1680966808062	Marionette	INFO	Listening on port 45093
+Read port: 45093
+WebDriver BiDi listening on ws://127.0.0.1:58611
+1680966808339	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileBH4dXD/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58611/devtools/browser/ada62213-3ca6-4c0a-ab90-d860c5ea6fe4
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
+1680966841386	geckodriver	INFO	Listening on 127.0.0.1:50641
+1680966841890	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ch" "--remote-debugging-port" "57833" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile9mhx9a"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: No GPUs detected via PCI
+1680966842262	Marionette	INFO	Marionette enabled
+1680966842267	Marionette	INFO	Listening on port 38099
+Read port: 38099
+WebDriver BiDi listening on ws://127.0.0.1:57833
+1680966842497	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile9mhx9a/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57833/devtools/browser/809391f3-c3be-479b-a94c-8afcd98ddb33
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1680966847140	Marionette	INFO	Stopped listening on port 38099
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1680966847260	Marionette	INFO	Stopped listening on port 33641
+[Parent 17722, IPC I/O Parent] WARNING: process 17962 exited on signal 9: file /build/firefox-wmvuWv/firefox-111.0.1+build2/ipc/chromium/src/base/process_util_posix.cc:266
+[Parent 15690, IPC I/O Parent] WARNING: process 15986 exited on signal 9: file /build/firefox-wmvuWv/firefox-111.0.1+build2/ipc/chromium/src/base/process_util_posix.cc:266
+[Parent 15690, IPC I/O Parent] WARNING: process 16059 exited on signal 9: file /build/firefox-wmvuWv/firefox-111.0.1+build2/ipc/chromium/src/base/process_util_posix.cc:266
+1680966858961	geckodriver	INFO	Listening on 127.0.0.1:33191
+1680966859434	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ch" "--remote-debugging-port" "44117" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile0VniK1"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: No GPUs detected via PCI
+1680966860162	Marionette	INFO	Marionette enabled
+1680966860167	Marionette	INFO	Listening on port 39721
+Read port: 39721
+WebDriver BiDi listening on ws://127.0.0.1:44117
+1680966860524	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile0VniK1/search.json.mozlz4", (void 0)))
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.sys.mjs", 370))
+DevTools listening on ws://127.0.0.1:44117/devtools/browser/54361a88-5297-4c9f-a7c5-edeb797bbd32
+WARNING: At least one completion condition is taking too long to complete. Conditions: [{"name":"ContentParent: id=7f75f2143100","state":{"remoteTypePrefix":"prealloc"},"filename":"/build/firefox-wmvuWv/firefox-111.0.1+build2/dom/ipc/ContentParent.cpp","lineNumber":3931,"stack":""}] Barrier: profile-before-change
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1680966869343	Marionette	INFO	Stopped listening on port 39721
+[Parent 18196, IPC I/O Parent] WARNING: process 18423 exited on signal 9: file /build/firefox-wmvuWv/firefox-111.0.1+build2/ipc/chromium/src/base/process_util_posix.cc:266
+[Parent 18196, IPC I/O Parent] WARNING: process 18420 exited on signal 9: file /build/firefox-wmvuWv/firefox-111.0.1+build2/ipc/chromium/src/base/process_util_posix.cc:266
+1680966870489	geckodriver::marionette	ERROR	Failed to close browser connection: Socket not connected (os error 107)
+[Parent 17722, IPC I/O Parent] WARNING: process 17932 exited on signal 15: file /build/firefox-wmvuWv/firefox-111.0.1+build2/ipc/chromium/src/base/process_util_posix.cc:266
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1680966900750	geckodriver	INFO	Listening on 127.0.0.1:35541
+1680966901261	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ch" "--remote-debugging-port" "53645" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilelELXOT"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: No GPUs detected via PCI
+1680966901798	Marionette	INFO	Marionette enabled
+1680966901803	Marionette	INFO	Listening on port 40831
+Read port: 40831
+WebDriver BiDi listening on ws://127.0.0.1:53645
+1680966902192	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilelELXOT/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53645/devtools/browser/e8dce63d-63d1-4294-b809-7f12dd975e1e
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
+console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+console.error: "update.locale" " file doesn't exist in either the application or GRE directories"

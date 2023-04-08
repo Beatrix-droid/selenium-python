@@ -4,12 +4,14 @@ from time import sleep
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
-from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.firefox.service import Service as FirefoxService
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+from selenium.webdriver.support.relative_locator import locate_with
+from webdriver_manager.firefox import GeckoDriverManager
 import os
 
-USER_NAME=os.environ["USERNAME"]
-USER_PASSWORD=os.environ["PASSWORD"]
+USER_NAME = os.environ.get("USERNAME")
+USER_PASSWORD = os.environ.get("PASSWORD")
 
 # initialise browser
 # wait.until(ExpectedConditions.elementToBeClickable(By.id("Login")));
@@ -18,140 +20,157 @@ USER_PASSWORD=os.environ["PASSWORD"]
 print("starting the automation job")
 current_day = date.today()
 
-#check that its friday or the last day of the month
-if (current_day.strftime("%A")== "Friday") or (current_day.day==monthrange(current_day.year, current_day.month)[1]) :
-    print("filling in the time sheet")
-   
-    # configure the options for the browser
-    options = Options()
-   
-    options.add_argument("--headless")
-    options.add_argument("start-maximized")
-    options.add_argument("detach")
-    # service=Service(GeckoDriverManager().install())
+# check that its friday or the last day of the month
+# if (current_day.strftime("%A")== "Friday") or (current_day.day==monthrange(current_day.year, current_day.month)[1]) :
+print("filling in the time sheet")
 
-    # initialise an instance of the browser
-    browser = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()),options=options)
+# configure the options for the browser
+options = Options()
+
+options.add_argument("--headless")
+options.add_argument("start-maximized")
+options.add_argument("detach")
+options.binary = FirefoxBinary("/usr/bin/firefox")
 
 
-    # navigate to the login page
-    browser.get("https://softwareinstitute.bamboohr.com/login.php")
+# initialise an instance of the browser
+browser = webdriver.Firefox(
+    service=FirefoxService(GeckoDriverManager().install()), options=options
+)
 
 
-    # check if login page has loaded correctly
-    spans = browser.find_elements(By.TAG_NAME, "span")
-    text_spans = [span.text for span in spans]
-
-    page_has_loaded = bool("Log in with SAML" in text_spans)
-
-    assert page_has_loaded,"Error initial login page not loaded correctly" and browser.save_screenshot("login_page.png")
+# navigate to the login page
+browser.get("https://softwareinstitute.bamboohr.com/login.php")
 
 
-    # click 'login with email and password':
-    normal_login_button = browser.find_element(
-        By.XPATH, "//button[contains(text(),'Log in with Email and Password')]"
-    ).click()
-    # identify login form and check that it has loaded correctly:
-    email = browser.find_element(By.CSS_SELECTOR, "#lemail")
-    password = browser.find_element(By.CSS_SELECTOR, "#password")
-    submit_button = browser.find_element(By.XPATH, "//span[text()='Log In']")
+# check if login page has loaded correctly
+spans = browser.find_elements(By.TAG_NAME, "span")
+text_spans = [span.text for span in spans]
 
-    assert (
-        submit_button and password and email
-    ), "Error login form not loaded correctly" and browser.save_screenshot(
-        "no_submit_btn.png"
-    )
+page_has_loaded = bool("Log in with SAML" in text_spans)
+
+assert (
+    page_has_loaded
+), "Error initial login page not loaded correctly" and browser.save_screenshot(
+    "login_page.png"
+)
 
 
-    # type into form
-    email.send_keys(USER_NAME)
-    password.send_keys(USER_PASSWORD)
+# click 'login with email and password':
+normal_login_button = browser.find_element(
+    By.XPATH, "//button[contains(text(),'Log in with Email and Password')]"
+).click()
+# identify login form and check that it has loaded correctly:
+email = browser.find_element(By.CSS_SELECTOR, "#lemail")
+password = browser.find_element(By.CSS_SELECTOR, "#password")
+submit_button = browser.find_element(By.XPATH, "//span[text()='Log In']")
 
-    # Submit form
-    submit_button.click()
-    # content = driver.find_element(By.CSS_SELECTOR, 'p.content')  to locate by class
-    sleep(5)
-    browser.save_full_page_screenshot("loggedin.png")
-    # confirm to user we have logged in
-    my_name = browser.find_element(By.XPATH, "//span[text()='Graduate Technical Consultant']")
-    assert my_name, " homepage not loaded correctly" and browser.save_screenshot(
-        "home_page_not_found.png"
-    )
-
-    # locate my "my timesheet" button and click on it
-    my_timesheet = browser.find_element(By.LINK_TEXT, "My Timesheet")
-    my_timesheet.click()
+assert (
+    submit_button and password and email
+), "Error login form not loaded correctly" and browser.save_screenshot(
+    "no_submit_btn.png"
+)
 
 
-    # check that we have navigated to the timesheet page:
-    h3_tags = browser.find_elements(By.TAG_NAME, "h3")
+# type into form
+email.send_keys(USER_NAME)
+password.send_keys(USER_PASSWORD)
 
-    if browser is None:
-        browser.quit()
+# Submit form
+submit_button.click()
+# content = driver.find_element(By.CSS_SELECTOR, 'p.content')  to locate by class
+sleep(2)
 
-    h3_text = [tag.text for tag in h3_tags]
-    assert "Timesheet" in h3_text, "timesheet page not found" and browser.save_screenshot(
-        "timesheet_not_found.png"
-    )
+# confirm to user we have logged in
+my_name = browser.find_element(
+    By.XPATH, "//span[text()='Graduate Technical Consultant']"
+)
+assert my_name, " homepage not loaded correctly" and browser.save_screenshot(
+    "home_page_not_found.png"
+)
+
+# locate my "my timesheet" button and click on it
+my_timesheet = browser.find_element(By.LINK_TEXT, "My Timesheet")
+my_timesheet.click()
 
 
-    # click on the time entries
-    time_sheet_form = browser.find_element(By.TAG_NAME, "form")
+# check that we have navigated to the timesheet page:
+h3_tags = browser.find_elements(By.TAG_NAME, "h3")
 
-    # this will be for link in links, but it ammounts to finding the "add time entry" link
-    links = time_sheet_form.find_elements(By.TAG_NAME, "a")
-
-    days_objs = browser.find_elements(By.CLASS_NAME, "TimesheetSlat__dayOfWeek")
-    week = [day.text for day in days_objs]
-    # mane timesheet page here
-
-    for link in links:
-
-        # wait to be back on the main page
-
-        # link.location_once_scrolled_into_view
-
-        sleep(2)
-        link.click()
-    
-
-        index_no = links.index(link)
-
-        if week[index_no] == "Sun" or week[index_no] == "Sat":
-            continue
-
-        # check how many hours you have worked for that particular day
-
-        day_total = browser.find_element(By.CLASS_NAME, "AddEditEntry__dayTotal")
-        hours_worked = day_total.text
-
-        # locate input box and drop down menu, as well as the buttons
-        input_box = browser.find_element(By.ID, "hoursWorked")
-        drop_down = browser.find_element(
-            By.XPATH, "//div[text()='--Select Project/Task--']")
-        save_button = browser.find_element(By.XPATH, "//span[text()='Save']")
-
-        # fill in time sheet if hours worked appear 0:
-        if hours_worked == "Day Total: 0h 00m":
-            input_box.send_keys("7.5")
-
-        # make sure to always indicate the automation and ai department and save the options
-        drop_down.click()
-        department = browser.find_element(
-            By.CSS_SELECTOR, ".fab-MenuOption__row").click()
-        save_button.click()
-
-        if index_no == (len(links) - 1):
-            print("time sheet filled")
-    browser.save_full_page_screenshot("timesheet.png")
+# quit if session is not valid any more
+if browser is None:
     browser.quit()
+    print("session got disconnected")
 
-else:
-     print("no need to fill in the time sheet today")
+h3_text = [tag.text for tag in h3_tags]
+assert "Timesheet" in h3_text, "timesheet page not found" and browser.save_screenshot(
+    "timesheet_not_found.png"
+)
 
 
+# click on the time entries
+time_sheet_form = browser.find_element(By.TAG_NAME, "form")
+
+# this will be for link in links, but it ammounts to finding the "add time entry" link
+links = time_sheet_form.find_elements(By.TAG_NAME, "a")
+print([link.get_attribute("innerHTML") for link in links])
+days_objs = browser.find_elements(By.CLASS_NAME, "TimesheetSlat__dayOfWeek")
+week = [day.text for day in days_objs]
+# mane timesheet page here
 
 
+for link in links:
+    # wait to be back on the main page
+
+    # link.location_once_scrolled_into_view
+
+    sleep(2)
+    link.click()
+
+    index_no = links.index(link)
+
+    # if week day link is sunday or saturday, skip and don't fill in the hours
+    if (week[index_no] == "Sun") or (week[index_no] == "Sat"):
+        continue
+
+    # if its a bank holiday or annual leave don't fill it in
+
+    if browser.find_element(
+        locate_with(
+            By.XPATH,
+            "//div[@class='TimesheetSlat__extraInfoItem TimesheetSlat__extraInfoItem--clockPush']",
+        )
+    ).below(link):
+        continue
+
+    # check how many hours you have worked for that particular day
+
+    day_total = browser.find_element(By.CLASS_NAME, "AddEditEntry__dayTotal")
+    hours_worked = day_total.text
+
+    # locate input box and drop down menu, as well as the buttons
+    input_box = browser.find_element(By.ID, "hoursWorked")
+    drop_down = browser.find_element(
+        By.XPATH, "//div[text()='--Select Project/Task--']"
+    )
+    save_button = browser.find_element(By.XPATH, "//span[text()='Save']")
+
+    # fill in time sheet if hours worked appear 0:
+    if hours_worked == "Day Total: 0h 00m":
+        input_box.send_keys("7.5")
+
+    # make sure to always indicate the automation and ai department and save the options
+    drop_down.click()
+    department = browser.find_element(By.CSS_SELECTOR, ".fab-MenuOption__row").click()
+    save_button.click()
+
+    if index_no == (len(links) - 1):
+        print("time sheet filled")
+browser.save_full_page_screenshot("timesheet.png")
+browser.quit()
+
+# else:
+#    print("no need to fill in the time sheet today")
 
 
 # hours=browser.find_element(By.XPATH, "//div[text()='Day Total: 7h 30m']")
