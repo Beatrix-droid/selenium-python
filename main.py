@@ -4,7 +4,8 @@ from time import sleep
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
-
+from webdriver_manager.firefox import GeckoDriverManager
+from selenium.webdriver.firefox.service import Service as FirefoxService
 import os
 
 USER_NAME=os.environ("USERNAME")
@@ -23,15 +24,14 @@ if (current_day.strftime("%A")== "Friday") or (current_day.day==monthrange(curre
    
     # configure the options for the browser
     options = Options()
-    options.binary_location = "/usr/bin/firefox"
+   
     options.add_argument("--headless")
     options.add_argument("start-maximized")
     options.add_argument("detach")
     # service=Service(GeckoDriverManager().install())
 
-
     # initialise an instance of the browser
-    browser = webdriver.Firefox(options=options)
+    browser = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()),options=options)
 
 
     # navigate to the login page
