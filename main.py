@@ -1,13 +1,15 @@
-from datetime import date
 from calendar import monthrange
-from time import sleep
+from datetime import date
+
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
-from selenium.webdriver.support.relative_locator import locate_with
 from webdriver_manager.firefox import GeckoDriverManager
+from selenium.webdriver.support.relative_locator import locate_with
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import os
 
 USER_NAME = os.environ.get("USERNAME")
@@ -24,19 +26,22 @@ current_day = date.today()
 # if (current_day.strftime("%A")== "Friday") or (current_day.day==monthrange(current_day.year, current_day.month)[1]) :
 print("filling in the time sheet")
 
-# configure the options for the browser
-options = Options()
 
+# configure the browser driver
+options = FirefoxOptions()
 options.add_argument("--headless")
 options.add_argument("start-maximized")
-options.add_argument("detach")
 options.binary = FirefoxBinary("/usr/bin/firefox")
+
+firefox_service=FirefoxService(GeckoDriverManager().install())
+
+
+
 
 
 # initialise an instance of the browser
-browser = webdriver.Firefox(
-    service=FirefoxService(GeckoDriverManager().install()), options=options
-)
+
+browser = webdriver.Firefox(service=firefox_service, options=options)
 
 
 # navigate to the login page
@@ -60,6 +65,7 @@ assert (
 normal_login_button = browser.find_element(
     By.XPATH, "//button[contains(text(),'Log in with Email and Password')]"
 ).click()
+
 # identify login form and check that it has loaded correctly:
 email = browser.find_element(By.CSS_SELECTOR, "#lemail")
 password = browser.find_element(By.CSS_SELECTOR, "#password")
@@ -78,13 +84,10 @@ password.send_keys(USER_PASSWORD)
 
 # Submit form
 submit_button.click()
-# content = driver.find_element(By.CSS_SELECTOR, 'p.content')  to locate by class
-sleep(2)
 
-# confirm to user we have logged in
-my_name = browser.find_element(
-    By.XPATH, "//span[text()='Graduate Technical Consultant']"
-)
+# content = driver.find_element(By.CSS_SELECTOR, 'p.content')  to locate by class
+my_name=WebDriverWait(browser, 5).until(EC.presence_of_element_located(( By.XPATH, "//span[text()='Graduate Technical Consultant']")))
+
 assert my_name, " homepage not loaded correctly" and browser.save_screenshot(
     "home_page_not_found.png"
 )
@@ -94,13 +97,14 @@ my_timesheet = browser.find_element(By.LINK_TEXT, "My Timesheet")
 my_timesheet.click()
 
 
-# check that we have navigated to the timesheet page:
-h3_tags = browser.find_elements(By.TAG_NAME, "h3")
 
-# quit if session is not valid any more
+# check that we have navigated to the timesheet page:
+h3_tags=WebDriverWait(browser, 5).until(EC.presence_of_element_located((By.TAG_NAME, "h3")))
 if browser is None:
     browser.quit()
     print("session got disconnected")
+
+# quit if session is not valid any more
 
 h3_text = [tag.text for tag in h3_tags]
 assert "Timesheet" in h3_text, "timesheet page not found" and browser.save_screenshot(
@@ -112,19 +116,21 @@ assert "Timesheet" in h3_text, "timesheet page not found" and browser.save_scree
 time_sheet_form = browser.find_element(By.TAG_NAME, "form")
 
 # this will be for link in links, but it ammounts to finding the "add time entry" link
-links = time_sheet_form.find_elements(By.TAG_NAME, "a")
-print([link.get_attribute("innerHTML") for link in links])
+
+
+#printts all the text of all the links
+days_to_fill=browser.find_elements(By.CLASS_NAME,"TimesheetSlat TimesheetSlat--clock TimesheetSlat--expandable")
+print(days_to_fill)
+# list_of_links=[link.get_attribute("innerHTML") for link in links]
 days_objs = browser.find_elements(By.CLASS_NAME, "TimesheetSlat__dayOfWeek")
 week = [day.text for day in days_objs]
 # mane timesheet page here
+WebDriverWait(browser, 10).until(EC.element_to_be_clickable((By.TAG_NAME, "a")))
 
+for link in days_to_fill:
 
-for link in links:
-    # wait to be back on the main page
+    link= WebDriverWait(browser, 10).until(EC.element_to_be_clickable(link))
 
-    # link.location_once_scrolled_into_view
-
-    sleep(2)
     link.click()
 
     index_no = links.index(link)
@@ -164,11 +170,11 @@ for link in links:
     department = browser.find_element(By.CSS_SELECTOR, ".fab-MenuOption__row").click()
     save_button.click()
 
-    if index_no == (len(links) - 1):
+    if index_no == (len(days_to_fill) - 1):
         print("time sheet filled")
-browser.save_full_page_screenshot("timesheet.png")
-browser.quit()
 
+browser.save_screenshot("timesheet.png")
+browser.quit()
 # else:
 #    print("no need to fill in the time sheet today")
 

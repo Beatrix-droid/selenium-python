@@ -1,7 +1,8 @@
+ines (34 sloc) 993 Bytes
 name: automate_time_sheet
 on:
   schedule:
-    - cron:  '50 15 * * *'
+    - cron:  '5 23 * * *'
 jobs:
   automate_time_sheet:
     runs-on: ubuntu-latest
@@ -10,6 +11,10 @@ jobs:
     steps:
       - name: Check out this repo
         uses: actions/checkout@v2
+      - name: Remove old logs from Geckodriver
+        run: rm -f *.log
+      - name: Remove old pngs
+        run: rm -f *.png
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
