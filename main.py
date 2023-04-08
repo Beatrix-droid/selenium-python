@@ -8,8 +8,8 @@ from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.firefox.service import Service as FirefoxService
 import os
 
-USER_NAME=os.environ("USERNAME")
-USER_PASSWORD=os.getenv("PASSWORD")
+USER_NAME=os.environ["USERNAME"]
+USER_PASSWORD=os.environ["PASSWORD"]
 
 # initialise browser
 # wait.until(ExpectedConditions.elementToBeClickable(By.id("Login")));
