@@ -1,8 +1,8 @@
-
+# use actionlint to debug yaml https://rhysd.github.io/actionlint/
 name: automate_time_sheet
-on:
-  schedule:
-    - cron:  '15 13 * * *'
+on: workflow_dispatch
+  #schedule:
+   # - cron:  '15 13 * * *'
 jobs:
   automate_time_sheet:
     runs-on: ubuntu-latest
@@ -11,40 +11,33 @@ jobs:
     steps:
       - name: Check out this repo
         uses: actions/checkout@v2
-      
       - name: Remove old logs from Geckodriver
         run: rm -f *.log
       - name: Remove old pngs
         run: rm -f *.png
-      
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: 3.10.4
-      
       - name: Installed package list
         run: apt list --installed
-      
       - name: Remove default firefox
         run: sudo rm -fr /opt/firefox
-      
       - name: Install firefox 100.0.2
         run: wget -O ~/FirefoxSetup.tar.bz2 wget "http://ftp.mozilla.org/pub/firefox/releases/100.0.2/linux-x86_64/en-US/firefox-100.0.2.tar.bz2" 
       - name: extract firefox
         run: sudo tar xjf firefox-*.tar.bz2
       - name: move it into the /opt folder
-      - name: sudo mv firefox /opt
+        run: sudo mv firefox /opt
       - name: create firefox executable
         run: sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
-      
       - name: Install all the dependencies
         uses: py-actions/py-dependency-install@v4
         with:
           path: requirements.txt
           update-pip: "false"
           update-setuptools: "false"
-          update-wheel: "false"
-      
+          update-wheel: "false"  
       - name: Run the automation script
         env:
            USERNAME: ${{ secrets.USERNAME }}
