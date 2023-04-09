@@ -1,6 +1,5 @@
 from calendar import monthrange
 from datetime import date
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
@@ -11,6 +10,11 @@ from selenium.webdriver.support.relative_locator import locate_with
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import os
+import logging
+
+
+
+logging.basicConfig(level=logging.DEBUG)
 
 USER_NAME = os.environ.get("USERNAME")
 USER_PASSWORD = os.environ.get("PASSWORD")
