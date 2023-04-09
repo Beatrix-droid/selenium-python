@@ -25,8 +25,7 @@ jobs:
       - name: Installed package list
         run: apt list --installed
       
-      - name: remove compressed firefox file
-        run: sudo rm *.bz2
+    
       - name: Remove default firefox
         run: sudo rm -fr /opt/firefox
       
@@ -34,6 +33,10 @@ jobs:
         run: wget "http://ftp.mozilla.org/pub/firefox/releases/100.0.2/linux-x86_64/en-US/firefox-100.0.2.tar.bz2" 
       - name: extract firefox
         run: sudo tar xjf firefox-*.tar.bz2
+      
+      - name: remove unneeded compressed folder
+        run: sudo rm *.bz2
+
       - name: move it into the /opt folder
         run: sudo mv firefox /opt
       - name: create firefox executable
