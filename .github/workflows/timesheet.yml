@@ -1,8 +1,8 @@
 
 name: automate_time_sheet
-on:
-  schedule:
-    - cron:  '15 13 * * *'
+on: workflow_dispatch
+  #schedule:
+   # - cron:  '15 13 * * *'
 jobs:
   automate_time_sheet:
     runs-on: ubuntu-latest
