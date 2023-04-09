@@ -10,11 +10,11 @@ from selenium.webdriver.support.relative_locator import locate_with
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import os
-import logging
+#import logging
 
 
 
-logging.basicConfig(level=logging.DEBUG)
+#logging.basicConfig(level=logging.DEBUG)
 
 USER_NAME = os.environ.get("USERNAME")
 USER_PASSWORD = os.environ.get("PASSWORD")
@@ -90,7 +90,7 @@ password.send_keys(USER_PASSWORD)
 submit_button.click()
 
 # content = driver.find_element(By.CSS_SELECTOR, 'p.content')  to locate by class
-my_name=WebDriverWait(browser, 5).until(EC.presence_of_element_located(( By.XPATH, "//span[text()='Graduate Technical Consultant']")))
+my_name=WebDriverWait(browser, 20).until(EC.presence_of_element_located(( By.XPATH, "//span[text()='Graduate Technical Consultant']")))
 
 assert my_name, " homepage not loaded correctly" and browser.save_screenshot(
     "home_page_not_found.png"
@@ -103,7 +103,7 @@ my_timesheet.click()
 
 
 # check that we have navigated to the timesheet page:
-h3_tags=WebDriverWait(browser, 5).until(EC.presence_of_element_located((By.TAG_NAME, "h3")))
+h3_tags=WebDriverWait(browser, 20).until(EC.presence_of_element_located((By.TAG_NAME, "h3")))
 if browser is None:
     browser.quit()
     print("session got disconnected")
@@ -133,11 +133,11 @@ WebDriverWait(browser, 10).until(EC.element_to_be_clickable((By.TAG_NAME, "a")))
 
 for link in days_to_fill:
 
-    link= WebDriverWait(browser, 10).until(EC.element_to_be_clickable(link))
+    link= WebDriverWait(browser, 20).until(EC.element_to_be_clickable(link))
 
     link.click()
 
-    index_no = links.index(link)
+    index_no = days_to_fill.index(link)
 
     # if week day link is sunday or saturday, skip and don't fill in the hours
     if (week[index_no] == "Sun") or (week[index_no] == "Sat"):
