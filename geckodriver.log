@@ -328,3 +328,91 @@ A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
 [Parent 21451, IPC I/O Parent] WARNING: process 21644 exited on signal 9: file /build/firefox-wmvuWv/firefox-111.0.1+build2/ipc/chromium/src/base/process_util_posix.cc:266
 [Parent 21451, IPC I/O Parent] WARNING: process 21656 exited on signal 9: file /build/firefox-wmvuWv/firefox-111.0.1+build2/ipc/chromium/src/base/process_util_posix.cc:266
 [Parent 21451, IPC I/O Parent] WARNING: process 21696 exited on signal 9: file /build/firefox-wmvuWv/firefox-111.0.1+build2/ipc/chromium/src/base/process_util_posix.cc:266
+1681118589563	geckodriver	INFO	Listening on 127.0.0.1:33027
+1681126445784	geckodriver	INFO	Listening on 127.0.0.1:41583
+1681126664126	geckodriver	INFO	Listening on 127.0.0.1:51235
+1681126664637	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/opt ... ed" "--remote-debugging-port" "37523" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileCJUtJo"
+XPCOMGlueLoad error for file /opt/firefox/libxul.so:
+libXtst.so.6: cannot open shared object file: No such file or directory
+Couldn't load XPCOM.
+1681126697577	geckodriver	INFO	Listening on 127.0.0.1:55801
+1681126796955	geckodriver	INFO	Listening on 127.0.0.1:57961
+1681126819681	geckodriver	INFO	Listening on 127.0.0.1:52883
+1681126837810	geckodriver	INFO	Listening on 127.0.0.1:34699
+1681126838316	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "50771" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile7reyvu"
+XPCOMGlueLoad error for file /opt/firefox/libxul.so:
+libXtst.so.6: cannot open shared object file: No such file or directory
+Couldn't load XPCOM.
+1681126878533	geckodriver	INFO	Listening on 127.0.0.1:49641
+1681126879037	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "47163" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile3mLWEJ"
+XPCOMGlueLoad error for file /opt/firefox/libxul.so:
+libXtst.so.6: cannot open shared object file: No such file or directory
+Couldn't load XPCOM.
+1681126893080	geckodriver	INFO	Listening on 127.0.0.1:55299
+1681126893584	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/opt ... ed" "--remote-debugging-port" "40203" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilepdpcck"
+XPCOMGlueLoad error for file /opt/firefox/libxul.so:
+libXtst.so.6: cannot open shared object file: No such file or directory
+Couldn't load XPCOM.
+1681126902866	geckodriver	INFO	Listening on 127.0.0.1:37823
+1681126903381	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "59231" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileHeDHp6"
+XPCOMGlueLoad error for file /opt/firefox/libxul.so:
+libXtst.so.6: cannot open shared object file: No such file or directory
+Couldn't load XPCOM.
+1681127247167	geckodriver	INFO	Listening on 127.0.0.1:60765
+1681127247645	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "58019" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileFOw4gR"
+XPCOMGlueLoad error for file /opt/firefox/libxul.so:
+libXtst.so.6: cannot open shared object file: No such file or directory
+Couldn't load XPCOM.
+1681127266710	geckodriver	INFO	Listening on 127.0.0.1:47801
+1681127267215	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "36451" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilejtGI5I"
+XPCOMGlueLoad error for file /opt/firefox/libxul.so:
+libXtst.so.6: cannot open shared object file: No such file or directory
+Couldn't load XPCOM.
+1681129989681	geckodriver	INFO	Listening on 127.0.0.1:45625
+1681129990087	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "35923" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilemQtKFX"
+XPCOMGlueLoad error for file /opt/firefox/libxul.so:
+libXtst.so.6: cannot open shared object file: No such file or directory
+Couldn't load XPCOM.
+1681130062457	geckodriver	INFO	Listening on 127.0.0.1:47471
+1681130062962	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "58657" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilefzN3mI"
+XPCOMGlueLoad error for file /opt/firefox/libxul.so:
+libXtst.so.6: cannot open shared object file: No such file or directory
+Couldn't load XPCOM.
+1681130224432	geckodriver	INFO	Listening on 127.0.0.1:54495
+1681130224935	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "33193" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilez0cZlH"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: No GPUs detected via PCI
+1681130225635	Marionette	INFO	Marionette enabled
+1681130225639	Marionette	INFO	Listening on port 33343
+Read port: 33343
+WebDriver BiDi listening on ws://127.0.0.1:33193
+1681130226059	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilez0cZlH/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:33193/devtools/browser/d3b21eea-0d60-424b-b9fa-1bddcec48384
+ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
+1681130313227	geckodriver	INFO	Listening on 127.0.0.1:37549
+1681130313731	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "51333" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileWoPEGs"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: No GPUs detected via PCI
+1681130314111	Marionette	INFO	Marionette enabled
+1681130314115	Marionette	INFO	Listening on port 45915
+Read port: 45915
+WebDriver BiDi listening on ws://127.0.0.1:51333
+1681130314287	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileWoPEGs/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51333/devtools/browser/7ad91b84-eddc-4e74-9ee4-db6c8a54c21c
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory

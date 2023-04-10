@@ -9,6 +9,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.support.relative_locator import locate_with
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from time import sleep
 import os
 #import logging
 
@@ -40,9 +41,6 @@ options.binary = FirefoxBinary("/usr/bin/firefox")
 firefox_service=FirefoxService(GeckoDriverManager().install())
 
 
-
-
-
 # initialise an instance of the browser
 
 browser = webdriver.Firefox(service=firefox_service, options=options)
@@ -51,6 +49,7 @@ browser = webdriver.Firefox(service=firefox_service, options=options)
 # navigate to the login page
 browser.get("https://softwareinstitute.bamboohr.com/login.php")
 
+print("navigated to the login form")
 
 # check if login page has loaded correctly
 spans = browser.find_elements(By.TAG_NAME, "span")
@@ -88,6 +87,7 @@ password.send_keys(USER_PASSWORD)
 
 # Submit form
 submit_button.click()
+sleep(2)
 
 # content = driver.find_element(By.CSS_SELECTOR, 'p.content')  to locate by class
 my_name=WebDriverWait(browser, 20).until(EC.presence_of_element_located(( By.XPATH, "//span[text()='Graduate Technical Consultant']")))
@@ -95,13 +95,14 @@ my_name=WebDriverWait(browser, 20).until(EC.presence_of_element_located(( By.XPA
 assert my_name, " homepage not loaded correctly" and browser.save_screenshot(
     "home_page_not_found.png"
 )
+print("logged in")
 
 # locate my "my timesheet" button and click on it
 my_timesheet = browser.find_element(By.LINK_TEXT, "My Timesheet")
 my_timesheet.click()
 
 
-
+sleep(2)
 # check that we have navigated to the timesheet page:
 h3_tags=WebDriverWait(browser, 20).until(EC.presence_of_element_located((By.TAG_NAME, "h3")))
 if browser is None:
@@ -115,7 +116,7 @@ assert "Timesheet" in h3_text, "timesheet page not found" and browser.save_scree
     "timesheet_not_found.png"
 )
 
-
+print("navigated to timesheet")
 # click on the time entries
 time_sheet_form = browser.find_element(By.TAG_NAME, "form")
 
