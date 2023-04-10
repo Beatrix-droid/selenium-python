@@ -9,13 +9,14 @@ from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.support.relative_locator import locate_with
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep
 import os
-#import logging
+
+# import logging
 
 
-
-#logging.basicConfig(level=logging.DEBUG)
+# logging.basicConfig(level=logging.DEBUG)
 
 USER_NAME = os.environ.get("USERNAME")
 USER_PASSWORD = os.environ.get("PASSWORD")
@@ -38,13 +39,15 @@ options.add_argument("--headless")
 options.add_argument("start-maximized")
 options.binary = FirefoxBinary("/usr/bin/firefox")
 
-firefox_service=FirefoxService(GeckoDriverManager().install())
+firefox_service = FirefoxService(GeckoDriverManager().install())
 
 
 # initialise an instance of the browser
-
 browser = webdriver.Firefox(service=firefox_service, options=options)
+browser.implicitly_wait(10)  # change the default wait to 10
 
+# create action chain object
+action = ActionChains(browser)
 
 # navigate to the login page
 browser.get("https://softwareinstitute.bamboohr.com/login.php")
@@ -87,12 +90,16 @@ password.send_keys(USER_PASSWORD)
 
 # Submit form
 submit_button.click()
-sleep(2)
+
 
 # content = driver.find_element(By.CSS_SELECTOR, 'p.content')  to locate by class
-my_name=WebDriverWait(browser, 20).until(EC.presence_of_element_located(( By.XPATH, "//span[text()='Graduate Technical Consultant']")))
+my_title = WebDriverWait(browser, 20).until(
+    EC.presence_of_element_located(
+        (By.XPATH, "//span[text()='Graduate Technical Consultant']")
+    )
+)
 
-assert my_name, " homepage not loaded correctly" and browser.save_screenshot(
+assert my_title, " homepage not loaded correctly" and browser.save_screenshot(
     "home_page_not_found.png"
 )
 print("logged in")
@@ -102,9 +109,11 @@ my_timesheet = browser.find_element(By.LINK_TEXT, "My Timesheet")
 my_timesheet.click()
 
 
-sleep(2)
 # check that we have navigated to the timesheet page:
-h3_tags=WebDriverWait(browser, 20).until(EC.presence_of_element_located((By.TAG_NAME, "h3")))
+sleep(2)
+h3_tags = WebDriverWait(browser, 20).until(
+    EC.presence_of_all_elements_located((By.TAG_NAME, "h3"))
+)
 if browser is None:
     browser.quit()
     print("session got disconnected")
@@ -117,26 +126,33 @@ assert "Timesheet" in h3_text, "timesheet page not found" and browser.save_scree
 )
 
 print("navigated to timesheet")
+
 # click on the time entries
 time_sheet_form = browser.find_element(By.TAG_NAME, "form")
 
-# this will be for link in links, but it ammounts to finding the "add time entry" link
+days_to_fill = time_sheet_form.find_elements(By.TAG_NAME, "a")
+# printts all the text of all the links
+print(
+    "the links I will click on are: ",
+    [link.get_attribute("innerHTML") for link in days_to_fill],
+)
 
-
-#printts all the text of all the links
-days_to_fill=browser.find_elements(By.CLASS_NAME,"TimesheetSlat TimesheetSlat--clock TimesheetSlat--expandable")
-print(days_to_fill)
 # list_of_links=[link.get_attribute("innerHTML") for link in links]
 days_objs = browser.find_elements(By.CLASS_NAME, "TimesheetSlat__dayOfWeek")
 week = [day.text for day in days_objs]
+
 # mane timesheet page here
-WebDriverWait(browser, 10).until(EC.element_to_be_clickable((By.TAG_NAME, "a")))
+
 
 for link in days_to_fill:
-
-    link= WebDriverWait(browser, 20).until(EC.element_to_be_clickable(link))
-
-    link.click()
+    
+    sleep(2)
+    browser.execute_script("arguments[0].scrollIntoView();", link)
+    action.move_to_element(link)
+    action.click(link)
+    action.perform()
+    sleep(2)
+    browser.save_screenshot("day.png")
 
     index_no = days_to_fill.index(link)
 
