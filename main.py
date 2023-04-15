@@ -140,9 +140,7 @@ print(
     [link.get_attribute("innerHTML") for link in days_to_fill],
 )
 
-# list_of_links=[link.get_attribute("innerHTML") for link in links]
-days_objs = browser.find_elements(By.CLASS_NAME, "TimesheetSlat__dayOfWeek")
-week = [day.text for day in days_objs]
+
 
 # mane timesheet page here
 
@@ -153,28 +151,28 @@ for link in days_to_fill:
     browser.execute_script("arguments[0].scrollIntoView();", link)
     action.move_to_element(link)
     action.perform()
+
     browser.execute_script("arguments[0].click();", link)
-
-    browser.save_screenshot("day.png")
-
-    index_no = days_to_fill.index(link)
-
-    # if week day link is sunday or saturday, skip and don't fill in the hours
-    if (week[index_no] == "Sun") or (week[index_no] == "Sat"):
-        continue
+    sleep(2)
 
     # if its a bank holiday or annual leave don't fill it in
+    h4_tags=browser.find_elements(By.TAG_NAME, "h4")
+    h4_text=[h4_tag.text for h4_tag in h4_tags]
+    day=h4_text[-1].split()[0]
 
-    if browser.find_element(
-        locate_with(
-            By.XPATH,
-            "//div[@class='TimesheetSlat__extraInfoItem TimesheetSlat__extraInfoItem--clockPush']",
-        )
-    ).below(link):
+    # if week day link is sunday or saturday, skip and don't fill in the hours
+    if ("Sunday" in day) or ("Saturday" in day):
+        cancel_button = browser.find_element(By.XPATH, "//span[text()='Cancel']")
+        browser.execute_script("arguments[0].click();", cancel_button)
+
         continue
 
-    # check how many hours you have worked for that particular day
+   #if browser.find_element(locate_with(By.XPATH,"//div[@class='TimesheetSlat__extraInfoItem TimesheetSlat__extraInfoItem--clockPush']")):
+        continue
 
+
+    # check how many hours you have worked for that particular day
+    sleep(2)
     day_total = browser.find_element(By.CLASS_NAME, "AddEditEntry__dayTotal")
     hours_worked = day_total.text
 
@@ -192,10 +190,12 @@ for link in days_to_fill:
     # make sure to always indicate the automation and ai department and save the options
     drop_down.click()
     department = browser.find_element(By.CSS_SELECTOR, ".fab-MenuOption__row").click()
-    save_button.click()
+    browser.execute_script("arguments[0].click();", save_button)
 
-    if index_no == (len(days_to_fill) - 1):
-        print("time sheet filled")
+
+
+print("time sheet filled")
+sleep(2)
 
 browser.save_screenshot("timesheet.png")
 browser.quit()
