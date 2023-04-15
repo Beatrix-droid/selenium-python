@@ -2982,3 +2982,137 @@ DevTools listening on ws://127.0.0.1:50333/devtools/browser/a5660b73-8b30-4ce6-a
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
 ALSA lib seq_hw.c:466:(snd_seq_hw_open) open /dev/snd/seq failed: No such file or directory
+1681557598808	geckodriver	INFO	Listening on 127.0.0.1:55217
+1681557599314	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "40649" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiletJNUjx"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1681557599837	Marionette	INFO	Marionette enabled
+1681557599844	Marionette	INFO	Listening on port 42285
+Read port: 42285
+WebDriver BiDi listening on ws://127.0.0.1:40649
+1681557599959	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiletJNUjx/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:40649/devtools/browser/956a141f-8952-40e5-ac22-57514741e41a
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+1681557655316	geckodriver	INFO	Listening on 127.0.0.1:40599
+1681557655829	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "38677" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileeLANPo"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1681557656671	Marionette	INFO	Marionette enabled
+1681557656678	Marionette	INFO	Listening on port 44271
+Read port: 44271
+WebDriver BiDi listening on ws://127.0.0.1:38677
+1681557656804	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileeLANPo/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:38677/devtools/browser/16673ec0-7a09-4355-a729-eb8919f63743
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+1681557826465	geckodriver	INFO	Listening on 127.0.0.1:55347
+1681557826468	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "58115" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileXCAJMg"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1681557827226	Marionette	INFO	Marionette enabled
+1681557827231	Marionette	INFO	Listening on port 46313
+Read port: 46313
+WebDriver BiDi listening on ws://127.0.0.1:58115
+1681557827340	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileXCAJMg/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58115/devtools/browser/b8a8bcf8-f713-4146-bc0c-6d99bac02641
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+1681557834752	Marionette	INFO	Stopped listening on port 44271
+1681557854019	Marionette	INFO	Stopped listening on port 46313
+1681557870677	geckodriver	INFO	Listening on 127.0.0.1:58695
+1681557870683	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "41689" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile6CiCIF"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1681557871470	Marionette	INFO	Marionette enabled
+1681557871475	Marionette	INFO	Listening on port 42361
+Read port: 42361
+WebDriver BiDi listening on ws://127.0.0.1:41689
+1681557871581	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile6CiCIF/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:41689/devtools/browser/da378446-bfd5-4c4a-bf9d-691eb1fac6cf
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+JavaScript warning: https://pagead2.googlesyndication.com/bg/qQ9mw0ckdUnCcE_fRg-2epoMaLUurlOMv3TU4-E81-A.js line 2 > eval line 4043 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1681558140125	geckodriver	INFO	Listening on 127.0.0.1:47161
+1681558140129	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "58119" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile2N9qP9"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1681558140963	Marionette	INFO	Marionette enabled
+1681558140968	Marionette	INFO	Listening on port 38699
+Read port: 38699
+WebDriver BiDi listening on ws://127.0.0.1:58119
+1681558141072	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile2N9qP9/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58119/devtools/browser/f30bc4b1-d2f0-4690-bc1a-dfb90a0ceb43
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+1681558209834	Marionette	INFO	Stopped listening on port 38699
+1681558257063	geckodriver	INFO	Listening on 127.0.0.1:35117
+1681558257067	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "42707" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilenZ8lsn"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1681558257828	Marionette	INFO	Marionette enabled
+1681558257832	Marionette	INFO	Listening on port 36685
+Read port: 36685
+WebDriver BiDi listening on ws://127.0.0.1:42707
+1681558257946	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilenZ8lsn/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:42707/devtools/browser/ea3b7a00-759d-4440-837a-7b03124063db
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+1681558331605	geckodriver	INFO	Listening on 127.0.0.1:34967
+1681558332115	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "50853" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileEVS2pb"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1681558332927	Marionette	INFO	Marionette enabled
+1681558332932	Marionette	INFO	Listening on port 44811
+WebDriver BiDi listening on ws://127.0.0.1:50853
+Read port: 44811
+1681558333141	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileEVS2pb/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50853/devtools/browser/7cfc555a-5d8d-443c-834b-2ebfafb178c9
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

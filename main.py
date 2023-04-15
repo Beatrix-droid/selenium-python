@@ -11,6 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep
+from config import credentials
 import os
 
 # import logging
@@ -18,9 +19,11 @@ import os
 
 # logging.basicConfig(level=logging.DEBUG)
 
-USER_NAME = os.environ.get("USERNAME")
-USER_PASSWORD = os.environ.get("PASSWORD")
+#USER_NAME = os.environ.get("USERNAME")
+#USER_PASSWORD = os.environ.get("PASSWORD")
 
+USER_NAME=credentials["username"]
+USER_PASSWORD=credentials["password"]
 # initialise browser
 # wait.until(ExpectedConditions.elementToBeClickable(By.id("Login")));
 
@@ -35,7 +38,7 @@ print("filling in the time sheet")
 
 # configure the browser driver
 options = FirefoxOptions()
-options.add_argument("--headless")
+#options.add_argument("--headless")
 options.add_argument("start-maximized")
 options.binary = FirefoxBinary("/usr/bin/firefox")
 
@@ -145,13 +148,13 @@ week = [day.text for day in days_objs]
 
 
 for link in days_to_fill:
-    
+
     sleep(2)
     browser.execute_script("arguments[0].scrollIntoView();", link)
     action.move_to_element(link)
-    action.click(link)
     action.perform()
-    sleep(2)
+    browser.execute_script("arguments[0].click();", link)
+
     browser.save_screenshot("day.png")
 
     index_no = days_to_fill.index(link)
