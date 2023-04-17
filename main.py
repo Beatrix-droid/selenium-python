@@ -10,6 +10,8 @@ from selenium.webdriver.support.relative_locator import locate_with
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import os
+import time
+
 #import logging
 
 
@@ -18,9 +20,10 @@ import os
 
 USER_NAME = os.environ.get("USERNAME")
 USER_PASSWORD = os.environ.get("PASSWORD")
+#USER_NAME=credentials["username"]
+#USER_PASSWORD=credentials["password"]
 
-# initialise browser
-# wait.until(ExpectedConditions.elementToBeClickable(By.id("Login")));
+
 
 # check if it is friday or the end of the month:
 print("starting the automation job")
@@ -35,18 +38,15 @@ print("filling in the time sheet")
 options = FirefoxOptions()
 options.add_argument("--headless")
 options.add_argument("start-maximized")
-options.binary = FirefoxBinary("/usr/bin/firefox")
+options.binary = FirefoxBinary("/usr/local/bin/firefox")
 
 firefox_service=FirefoxService(GeckoDriverManager().install())
 
 
 
 
-
 # initialise an instance of the browser
-
 browser = webdriver.Firefox(service=firefox_service, options=options)
-
 
 # navigate to the login page
 browser.get("https://softwareinstitute.bamboohr.com/login.php")
@@ -73,7 +73,14 @@ normal_login_button = browser.find_element(
 # identify login form and check that it has loaded correctly:
 email = browser.find_element(By.CSS_SELECTOR, "#lemail")
 password = browser.find_element(By.CSS_SELECTOR, "#password")
-submit_button = browser.find_element(By.XPATH, "//span[text()='Log In']")
+buttons = browser.find_elements(By.TAG_NAME, "span")
+
+for button in buttons:
+    if button.text== "Log In":
+        submit_button=button
+        submit_button.click() #found the sub button
+        break
+
 
 assert (
     submit_button and password and email
@@ -90,7 +97,7 @@ password.send_keys(USER_PASSWORD)
 submit_button.click()
 
 # content = driver.find_element(By.CSS_SELECTOR, 'p.content')  to locate by class
-my_name=WebDriverWait(browser, 20).until(EC.presence_of_element_located(( By.XPATH, "//span[text()='Graduate Technical Consultant']")))
+my_name=WebDriverWait(browser, 20).until(EC.presence_of_element_located((By.XPATH, "//span[text()='Graduate Technical Consultant']")))
 
 assert my_name, " homepage not loaded correctly" and browser.save_screenshot(
     "home_page_not_found.png"
@@ -103,7 +110,8 @@ my_timesheet.click()
 
 
 # check that we have navigated to the timesheet page:
-h3_tags=WebDriverWait(browser, 20).until(EC.presence_of_element_located((By.TAG_NAME, "h3")))
+h3_tags=browser.find_elements(By.TAG_NAME, "h3")
+
 if browser is None:
     browser.quit()
     print("session got disconnected")
@@ -111,6 +119,7 @@ if browser is None:
 # quit if session is not valid any more
 
 h3_text = [tag.text for tag in h3_tags]
+
 assert "Timesheet" in h3_text, "timesheet page not found" and browser.save_screenshot(
     "timesheet_not_found.png"
 )
@@ -123,8 +132,9 @@ time_sheet_form = browser.find_element(By.TAG_NAME, "form")
 
 
 #printts all the text of all the links
-days_to_fill=browser.find_elements(By.CLASS_NAME,"TimesheetSlat TimesheetSlat--clock TimesheetSlat--expandable")
-print(days_to_fill)
+days_to_fill=browser.find_elements(By.CLASS_NAME,"TimesheetSlat__addEntryLink")
+print([day.text for day in days_to_fill])
+
 # list_of_links=[link.get_attribute("innerHTML") for link in links]
 days_objs = browser.find_elements(By.CLASS_NAME, "TimesheetSlat__dayOfWeek")
 week = [day.text for day in days_objs]
