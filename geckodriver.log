@@ -4051,3 +4051,134 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
 1681561351463	Marionette	INFO	Stopped listening on port 38089
 >>>>>>> 6c3595208ad3160e6af4aa9398634bc260a71ad8
+1681723610920	geckodriver	INFO	Listening on 127.0.0.1:57349
+1681723664317	geckodriver	INFO	Listening on 127.0.0.1:54599
+1681723664822	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "35999" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilevvxOZU"
+Error: no DISPLAY environment variable specified
+1681723681947	geckodriver	INFO	Listening on 127.0.0.1:48527
+1681723682452	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "56649" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilefCokKp"
+Error: no DISPLAY environment variable specified
+1681723755497	geckodriver	INFO	Listening on 127.0.0.1:42313
+1681723756002	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "58915" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilejnSppD"
+Error: no DISPLAY environment variable specified
+1681723764843	geckodriver	INFO	Listening on 127.0.0.1:45481
+1681723765347	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "50555" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileN3bDVJ"
+Error: no DISPLAY environment variable specified
+1681724356146	geckodriver	INFO	Listening on 127.0.0.1:55331
+1681724356605	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "48299" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilep0ZQjb"
+Error: no DISPLAY environment variable specified
+1681724395090	geckodriver	INFO	Listening on 127.0.0.1:42985
+1681724395595	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "51777" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileurDyuU"
+Error: no DISPLAY environment variable specified
+1681724440502	geckodriver	INFO	Listening on 127.0.0.1:47011
+1681724441006	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "38955" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiledeX07C"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681724441666	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiledeX07C/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:38955/devtools/browser/47899ac0-1ea2-4789-8b98-24dfd1cd72a6
+1681724443562	Marionette	INFO	Listening on port 34195
+Read port: 34195
+1681724443647	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1681724526029	geckodriver	INFO	Listening on 127.0.0.1:54159
+1681724526534	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "43593" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileNHdaUc"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681724526833	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileNHdaUc/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:43593/devtools/browser/3aa69d18-8600-48ea-8433-ffe4a7fc28e1
+1681724528686	Marionette	INFO	Listening on port 46101
+Read port: 46101
+1681724528937	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: =Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header:  e°ÓÿÞ&ùb<mØ×Ê: - _processIncoming@chrome://remote/content/marionette/transport.js:414:17
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+1681725231359	geckodriver	INFO	Listening on 127.0.0.1:34469
+1681725231759	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "56809" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileoBAFcV"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681725236096	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileoBAFcV/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56809/devtools/browser/66d849c4-aad3-4baf-bf49-bcdb00bc731b
+1681725241515	Marionette	INFO	Listening on port 45831
+Read port: 45831
+1681725241663	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1681725304318	Marionette	INFO	Stopped listening on port 45831

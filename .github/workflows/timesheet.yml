@@ -32,7 +32,7 @@ jobs:
       - name: Install firefox 100.0.2
         run: wget "http://ftp.mozilla.org/pub/firefox/releases/100.0.2/linux-x86_64/en-US/firefox-100.0.2.tar.bz2" 
       - name: extract firefox
-        run: sudo rm *.bz2
+        run: sudo tar xjf firefox-*.tar.bz2
       
       - name: remove unneeded compressed folder
         run: sudo rm *.bz2
@@ -40,7 +40,7 @@ jobs:
       - name: move it into the /opt folder
         run: sudo mv firefox /opt
       - name: remove firefox executable in /bin
-        run: sudo rm /usr"/bin/firefox
+        run: sudo rm /usr/bin/firefox
       - name: create firefox executable
         run: sudo ln -s /opt/firefox/firefox /usr/bin/firefox
       

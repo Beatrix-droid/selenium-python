@@ -8,6 +8,8 @@ from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.support.relative_locator import locate_with
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep
@@ -18,8 +20,8 @@ import os
 
 # logging.basicConfig(level=logging.DEBUG)
 
-#USER_NAME = os.environ.get("USERNAME")
-#USER_PASSWORD = os.environ.get("PASSWORD")
+USER_NAME = os.environ.get("USERNAME")
+USER_PASSWORD = os.environ.get("PASSWORD")
 
 #USER_NAME=credentials["username"]
 #USER_PASSWORD=credentials["password"]
@@ -37,9 +39,9 @@ print("filling in the time sheet")
 
 # configure the browser driver
 options = FirefoxOptions()
-#options.add_argument("--headless")
+options.add_argument("--headless")
 options.add_argument("start-maximized")
-options.binary = FirefoxBinary("/usr/bin/firefox")
+options.binary = FirefoxBinary("/usr/local/bin/firefox")
 
 firefox_service = FirefoxService(GeckoDriverManager().install())
 
@@ -156,7 +158,9 @@ for link in days_to_fill:
     # need to implement logic for if its a bank holiday or annual leave don't fill it in
 
     # check what day of the week it is
-    h4_tags=browser.find_elements(By.TAG_NAME, "h4")
+    ignored_exceptions=(NoSuchElementException,StaleElementReferenceException)
+    h4_tags= WebDriverWait(browser, 10 ,ignored_exceptions=ignored_exceptions)\
+                        .until(EC.presence_of_all_elements_located((By.TAG_NAME, "h4")))
     h4_text=[h4_tag.text for h4_tag in h4_tags]
     day=h4_text[-1].split()[0]
 
@@ -196,9 +200,11 @@ for link in days_to_fill:
         browser.execute_script("arguments[0].click();", save_button)
 
 print("time sheet filled")
-sleep(2)
+sleep(5)
 
 browser.save_screenshot("timesheet.png")
+# log out
+browser.get("https://softwareinstitute.bamboohr.com/logged_out.php")
 browser.quit()
 # else:
 #    print("no need to fill in the time sheet today")
