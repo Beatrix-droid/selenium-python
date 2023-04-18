@@ -76,7 +76,7 @@ jobs:
           target_branch: master
           files: ./
           remote_repository: https://github.com/Beatrix-droid/selenium-python
-          access_token: ${{ github.token }}
+          access_token: ${{secrets.GITHUB_TOKEN }}
           force: true
           empty: true
           tags: true
