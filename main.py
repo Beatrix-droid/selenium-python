@@ -18,13 +18,19 @@ import os
 # import logging
 
 
-# logging.basicConfig(level=logging.DEBUG)
+#check where to get the env variables:
+hostname= os.getenv("WHEREAMI")
 
-USER_NAME = os.environ.get("USERNAME")
-USER_PASSWORD = os.environ.get("PASSWORD")
+print(hostname)
+if hostname=="LOCAL":
+    from config import credentials
+    USER_NAME=credentials["username"]
+    USER_PASSWORD=credentials["password"]
+else:
+    USER_NAME = os.environ.get("USERNAME")
+    USER_PASSWORD = os.environ.get("PASSWORD")
 
-#USER_NAME=credentials["username"]
-#USER_PASSWORD=credentials["password"]
+
 
 # initialise browser
 
@@ -39,9 +45,9 @@ print("filling in the time sheet")
 
 # configure the browser driver
 options = FirefoxOptions()
-options.add_argument("--headless")
+#options.add_argument("--headless")
 options.add_argument("start-maximized")
-options.binary = FirefoxBinary("/usr/local/bin/firefox")
+options.binary = FirefoxBinary("/usr/bin/firefox")
 
 firefox_service = FirefoxService(GeckoDriverManager().install())
 
