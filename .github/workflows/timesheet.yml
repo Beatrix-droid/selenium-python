@@ -20,10 +20,12 @@ jobs:
           rm -f *.log
           rm -f *.png
 
-      - name: git add the removed files
-        run: git add .
-      - name: commit the removed files
-        run:  git commit -m "removed old pngs and logs"
+      - name: configure git and remove old files
+        run : |
+          git config --global user.email "GithubBot@noreply.com"
+          git config --global user.name "Github Bot"
+          git add .
+          git commit -m "removed old pngs and logs"
 
 
       - name: Set up Python
