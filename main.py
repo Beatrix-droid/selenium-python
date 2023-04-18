@@ -1,53 +1,58 @@
 from calendar import monthrange
 from datetime import date
-from time import sleep
-import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from webdriver_manager.firefox import GeckoDriverManager
+from selenium.webdriver.support.relative_locator import locate_with
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
 from selenium.webdriver.common.action_chains import ActionChains
+from time import sleep
+import os
+import logging
 
 
-
-#check where to get the env variables:
-hostname= os.getenv("WHEREAMI")
-
-print(hostname)
-if hostname=="LOCAL":
-    from config import credentials
-    USER_NAME=credentials["username"]
-    USER_PASSWORD=credentials["password"]
-else:
-    USER_NAME = os.environ.get("USERNAME")
-    USER_PASSWORD = os.environ.get("PASSWORD")
-
-#USER_NAME=credentials["username"]
-#USER_PASSWORD=credentials["password"]
+# import logging
+logging.basicConfig(level=logging.INFO)
 
 # initialise browser
 
 # check if it is friday or the end of the month:
-print("starting the automation job")
+logging.info("starting the automation job")
 current_day = date.today()
 
+logging.info(f"today is {current_day.strftime('%A')} and the day of the month is {current_day.day}")
 # check that its friday or the last day of the month
 # if (current_day.strftime("%A")== "Friday") or (current_day.day==monthrange(current_day.year, current_day.month)[1]) :
-print("filling in the time sheet")
+logging.info("filling in the time sheet")
 
 
 # configure the browser driver
 options = FirefoxOptions()
-#options.add_argument("--headless")
 options.add_argument("start-maximized")
 options.binary = FirefoxBinary("/usr/bin/firefox")
 
 firefox_service = FirefoxService(GeckoDriverManager().install())
+
+#check where to get the env variables, LOCAL is for development and debugging, else default to productions setup:
+hostname= os.getenv("WHEREAMI")
+if hostname=="LOCAL":
+    logging.info("environment is local, using local env variables")
+    from config import credentials
+    USER_NAME=credentials["username"]
+    USER_PASSWORD=credentials["password"]
+else:
+    USER_NAME = os.environ.get("USERNAME") #for production
+    USER_PASSWORD = os.environ.get("PASSWORD")
+    options.add_argument("--headless")
+    logging.info("environment is prod, using local gh secrets and instantiating a headless browser")
+
+
 
 # initialise an instance of the browser
 browser = webdriver.Firefox(service=firefox_service, options=options)
@@ -59,7 +64,7 @@ action = ActionChains(browser)
 # navigate to the login page
 browser.get("https://softwareinstitute.bamboohr.com/login.php")
 
-print("navigated to the login form")
+logging.info("navigated to the login form")
 
 # check if login page has loaded correctly
 spans = browser.find_elements(By.TAG_NAME, "span")
@@ -72,6 +77,7 @@ assert (
 ), "Error initial login page not loaded correctly" and browser.save_screenshot(
     "login_page.png"
 )
+
 
 # click 'login with email and password':
 normal_login_button = browser.find_element(
@@ -108,7 +114,7 @@ my_title = WebDriverWait(browser, 20).until(
 assert my_title, " homepage not loaded correctly" and browser.save_screenshot(
     "home_page_not_found.png"
 )
-print("logged in")
+logging.info("logged in")
 
 # locate my "my timesheet" button and click on it
 my_timesheet = browser.find_element(By.LINK_TEXT, "My Timesheet")
@@ -120,43 +126,33 @@ sleep(2)
 h3_tags = WebDriverWait(browser, 20).until(
     EC.presence_of_all_elements_located((By.TAG_NAME, "h3"))
 )
-
-# quit if session is not valid any more
 if browser is None:
     browser.quit()
-    print("session got disconnected")
+    logging.error("session got disconnected")
 
+# quit if session is not valid any more
 
 h3_text = [tag.text for tag in h3_tags]
 assert "Timesheet" in h3_text, "timesheet page not found" and browser.save_screenshot(
     "timesheet_not_found.png"
 )
 
-print("navigated to timesheet")
+logging.info("navigated to timesheet")
 
 # click on the time entries
-sleep(3)
-
 time_sheet_form = browser.find_element(By.TAG_NAME, "form")
-divs=time_sheet_form.find_elements(By.CSS_SELECTOR, "div.TimesheetSlat__dataWrapper")
 
-inner_divs=divs.find_element(By.CSS_SELECTOR, "div.TimesheetSlat__extraInfoItem")
-# inner_divs = divs.find_element(By.CLASS_NAME, "TimesheetSlat__dataWrapper")
-print(inner_divs.text)
 days_to_fill = time_sheet_form.find_elements(By.TAG_NAME, "a")
-# printts all the text of all the links
 
-print(
-    "the links I will click on are: ",
-    [link.get_attribute("innerHTML") for link in days_to_fill],
-)
- 
+logging.info(f"found {str(len(days_to_fill))} to click on. Starting to fill in the timesheet")
 
-# main timesheet filling logic here
+
+# main timesheet page here
+
 for link in days_to_fill:
 
-    # wait for elements to load properly
     sleep(2)
+    logging.info(f"clicking on link no {str(days_to_fill.index(link))}")
     browser.execute_script("arguments[0].scrollIntoView();", link)
     action.move_to_element(link)
     action.perform()
@@ -176,8 +172,10 @@ for link in days_to_fill:
 
     # if week day is Sunday or Saturday, skip and don't fill in the hours
     if ("Sunday" in day) or ("Saturday" in day):
+        logging.info(f"day is a {day} skipping this day")
         cancel_button = browser.find_element(By.XPATH, "//span[text()='Cancel']")
         browser.execute_script("arguments[0].click();", cancel_button)
+        logging.info("moved onto the next day")
         continue
 
     # check how many hours you have worked for that particular day
@@ -187,11 +185,13 @@ for link in days_to_fill:
 
     #if hours are already filled for that day skip filling that day in
     if hours_worked == "Day Total: 7h 30m":
+        logging.info(f"hours worked already present are {hours_worked}, skipping this day")
         cancel_button = browser.find_element(By.XPATH, "//span[text()='Cancel']")
         browser.execute_script("arguments[0].click();", cancel_button)
+        logging.info("moved onto the next day")
         continue
 
-  
+
     # else locate input box and drop down menu, as well as the save buttons
     input_box = browser.find_element(By.ID, "hoursWorked")
     drop_down = browser.find_element(
@@ -201,25 +201,28 @@ for link in days_to_fill:
 
     # fill in time sheet if hours worked appear 0:
     if hours_worked == "Day Total: 0h 00m":
+        logging.info(f"entering in hours for {day}")
         input_box.send_keys("7.5")
 
         # make sure to always indicate the automation and ai department and save the options
         drop_down.click()
         department = browser.find_element(By.CSS_SELECTOR, ".fab-MenuOption__row").click()
         browser.execute_script("arguments[0].click();", save_button)
+        logging.info("hours successfully entered, moved onto the next day")
 
 
-print("time sheet filled")
-# wait for a couple of seconds before taking the screenshot confirming that the job got done
-sleep(4)
-browser.save_full_page_screenshot("timesheet.png")
-print("logging out")
-# log out
+logging.info("time sheet filled")
+sleep(5)
+
+browser.save_full_page_screenshot("timehseet.png")
+logging.info("Screenshot with timesheet filled saved! Now logging out")
+# log out and quit browser
+
 browser.get("https://softwareinstitute.bamboohr.com/logged_out.php")
-print("logged out successfully")
-sleep(3)
-browser.save_screenshot("logged_out.png")
+sleep(1)
+logging.info("Successfully logged out")
 browser.quit()
+sleep(1)
+logging.info("Closed browser")
 # else:
-#    print("no need to fill in the time sheet today")
-
+#    logging.info("no need to fill in the time sheet today")
