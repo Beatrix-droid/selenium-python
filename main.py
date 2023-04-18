@@ -8,10 +8,11 @@ from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.support.relative_locator import locate_with
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep
-from config import credentials
 import os
 
 # import logging
@@ -19,13 +20,13 @@ import os
 
 # logging.basicConfig(level=logging.DEBUG)
 
-#USER_NAME = os.environ.get("USERNAME")
-#USER_PASSWORD = os.environ.get("PASSWORD")
+USER_NAME = os.environ.get("USERNAME")
+USER_PASSWORD = os.environ.get("PASSWORD")
 
-USER_NAME=credentials["username"]
-USER_PASSWORD=credentials["password"]
+#USER_NAME=credentials["username"]
+#USER_PASSWORD=credentials["password"]
+
 # initialise browser
-# wait.until(ExpectedConditions.elementToBeClickable(By.id("Login")));
 
 # check if it is friday or the end of the month:
 print("starting the automation job")
@@ -38,9 +39,9 @@ print("filling in the time sheet")
 
 # configure the browser driver
 options = FirefoxOptions()
-#options.add_argument("--headless")
+options.add_argument("--headless")
 options.add_argument("start-maximized")
-options.binary = FirefoxBinary("/usr/bin/firefox")
+options.binary = FirefoxBinary("/usr/local/bin/firefox")
 
 firefox_service = FirefoxService(GeckoDriverManager().install())
 
@@ -142,8 +143,7 @@ print(
 
 
 
-# mane timesheet page here
-
+# main timesheet page here
 
 for link in days_to_fill:
 
@@ -155,28 +155,35 @@ for link in days_to_fill:
     browser.execute_script("arguments[0].click();", link)
     sleep(2)
 
-    # if its a bank holiday or annual leave don't fill it in
-    h4_tags=browser.find_elements(By.TAG_NAME, "h4")
+    # need to implement logic for if its a bank holiday or annual leave don't fill it in
+
+    # check what day of the week it is
+    ignored_exceptions=(NoSuchElementException,StaleElementReferenceException)
+    h4_tags= WebDriverWait(browser, 10 ,ignored_exceptions=ignored_exceptions)\
+                        .until(EC.presence_of_all_elements_located((By.TAG_NAME, "h4")))
     h4_text=[h4_tag.text for h4_tag in h4_tags]
     day=h4_text[-1].split()[0]
 
-    # if week day link is sunday or saturday, skip and don't fill in the hours
+
+    # if week day is Sunday or Saturday, skip and don't fill in the hours
     if ("Sunday" in day) or ("Saturday" in day):
         cancel_button = browser.find_element(By.XPATH, "//span[text()='Cancel']")
         browser.execute_script("arguments[0].click();", cancel_button)
-
         continue
-
-   #if browser.find_element(locate_with(By.XPATH,"//div[@class='TimesheetSlat__extraInfoItem TimesheetSlat__extraInfoItem--clockPush']")):
-        continue
-
 
     # check how many hours you have worked for that particular day
     sleep(2)
     day_total = browser.find_element(By.CLASS_NAME, "AddEditEntry__dayTotal")
     hours_worked = day_total.text
 
-    # locate input box and drop down menu, as well as the buttons
+    #if hours are already filled for that day skip filling that day in
+    if hours_worked == "Day Total: 7h 30m":
+        cancel_button = browser.find_element(By.XPATH, "//span[text()='Cancel']")
+        browser.execute_script("arguments[0].click();", cancel_button)
+        continue
+
+
+    # else locate input box and drop down menu, as well as the save buttons
     input_box = browser.find_element(By.ID, "hoursWorked")
     drop_down = browser.find_element(
         By.XPATH, "//div[text()='--Select Project/Task--']"
@@ -187,16 +194,18 @@ for link in days_to_fill:
     if hours_worked == "Day Total: 0h 00m":
         input_box.send_keys("7.5")
 
-    # make sure to always indicate the automation and ai department and save the options
-    drop_down.click()
-    department = browser.find_element(By.CSS_SELECTOR, ".fab-MenuOption__row").click()
-    browser.execute_script("arguments[0].click();", save_button)
+        # make sure to always indicate the automation and ai department and save the options
+        drop_down.click()
+        department = browser.find_element(By.CSS_SELECTOR, ".fab-MenuOption__row").click()
+        browser.execute_script("arguments[0].click();", save_button)
 
 
 print("time sheet filled")
-sleep(2)
+sleep(5)
 
 browser.save_screenshot("timesheet.png")
+# log out
+browser.get("https://softwareinstitute.bamboohr.com/logged_out.php")
 browser.quit()
 # else:
 #    print("no need to fill in the time sheet today")

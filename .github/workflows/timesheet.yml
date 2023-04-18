@@ -40,7 +40,7 @@ jobs:
       - name: move it into the /opt folder
         run: sudo mv firefox /opt
       - name: remove firefox executable in /bin
-        run: sudo rm /usr"/bin/firefox
+        run: sudo rm /usr/bin/firefox
       - name: create firefox executable
         run: sudo ln -s /opt/firefox/firefox /usr/bin/firefox
       

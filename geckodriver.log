@@ -328,6 +328,514 @@ A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
 [Parent 21451, IPC I/O Parent] WARNING: process 21644 exited on signal 9: file /build/firefox-wmvuWv/firefox-111.0.1+build2/ipc/chromium/src/base/process_util_posix.cc:266
 [Parent 21451, IPC I/O Parent] WARNING: process 21656 exited on signal 9: file /build/firefox-wmvuWv/firefox-111.0.1+build2/ipc/chromium/src/base/process_util_posix.cc:266
 [Parent 21451, IPC I/O Parent] WARNING: process 21696 exited on signal 9: file /build/firefox-wmvuWv/firefox-111.0.1+build2/ipc/chromium/src/base/process_util_posix.cc:266
+<<<<<<< HEAD
+1681050542899	geckodriver	INFO	Listening on 127.0.0.1:48349
+1681050786297	geckodriver	INFO	Listening on 127.0.0.1:34467
+1681389317518	geckodriver	INFO	Listening on 127.0.0.1:41687
+1681389355239	geckodriver	INFO	Listening on 127.0.0.1:43533
+1681389355743	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "53959" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileg893Ic"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681389357406	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileg893Ic/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53959/devtools/browser/fce92511-08db-4e5f-8e52-7771b8ce3ff3
+1681389360122	Marionette	INFO	Listening on port 39967
+Read port: 39967
+1681389360239	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1681389430100	geckodriver	INFO	Listening on 127.0.0.1:47195
+1681389430604	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "55607" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile4KXm2b"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681389430881	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile4KXm2b/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55607/devtools/browser/e5bdcf8c-5355-4e44-98e9-ec9e8e4990e7
+1681389432434	Marionette	INFO	Listening on port 36365
+Read port: 36365
+1681389432584	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1681389632878	geckodriver	INFO	Listening on 127.0.0.1:38105
+1681389633382	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "56777" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile5TNRMh"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681389633650	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile5TNRMh/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56777/devtools/browser/056ae2c8-9281-4ad0-b1cd-f39626dc5013
+1681389635390	Marionette	INFO	Listening on port 45265
+Read port: 45265
+1681389635519	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1681389674817	geckodriver	INFO	Listening on 127.0.0.1:52821
+1681389675321	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "44711" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilel8gGYk"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681389675604	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilel8gGYk/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:44711/devtools/browser/be1da1be-10bf-4dc4-bbaa-71cf4bee34fe
+1681389677379	Marionette	INFO	Listening on port 42029
+Read port: 42029
+1681389677475	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1681389739009	geckodriver	INFO	Listening on 127.0.0.1:38415
+1681389739496	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "41633" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileirCjG5"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681389740121	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileirCjG5/search.json.mozlz4", (void 0)))
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+1681389870001	geckodriver	INFO	Listening on 127.0.0.1:58647
+1681389870413	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "44105" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileEpyLZ6"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681389871489	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileEpyLZ6/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:44105/devtools/browser/113b2eee-a701-4f17-aced-bc059cf8b498
+1681389874299	Marionette	INFO	Listening on port 39393
+Read port: 39393
+1681389874352	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1681390010350	geckodriver	INFO	Listening on 127.0.0.1:44161
+1681390010856	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "49871" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileff9Rkd"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681390011149	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileff9Rkd/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49871/devtools/browser/eb14cf2e-c4b5-4c53-b768-1b56e88fec7e
+1681390012888	Marionette	INFO	Listening on port 37737
+Read port: 37737
+1681390013027	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1681390021662	Marionette	INFO	Stopped listening on port 37737
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+1681390666593	geckodriver	INFO	Listening on 127.0.0.1:54571
+1681390666988	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "35051" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileY4GrQv"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681390668632	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileY4GrQv/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:35051/devtools/browser/dff693ae-6a3a-45c1-8f66-230c0dbb63ad
+1681390671779	Marionette	INFO	Listening on port 45327
+Read port: 45327
+1681390672068	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1681391038123	geckodriver	INFO	Listening on 127.0.0.1:42885
+1681391038631	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "53091" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilepqBJ8N"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681391038991	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilepqBJ8N/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53091/devtools/browser/d9246c50-afc5-46a9-95cb-ebb37686c323
+1681391040575	Marionette	INFO	Listening on port 41353
+Read port: 41353
+1681391040793	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+1681391111218	geckodriver	INFO	Listening on 127.0.0.1:54095
+1681391111722	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "51065" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileSiqQVE"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681391112077	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileSiqQVE/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51065/devtools/browser/ede3d171-b50f-47f5-b506-c76482744072
+1681391113885	Marionette	INFO	Listening on port 41949
+Read port: 41949
+1681391114028	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1681391127140	Marionette	INFO	Stopped listening on port 41949
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+1681391845885	geckodriver	INFO	Listening on 127.0.0.1:50685
+1681391846387	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "51695" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileHr7zxA"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681391846876	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileHr7zxA/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51695/devtools/browser/1a7a9675-e5c2-4b19-9187-95b29f5b4fea
+1681391848646	Marionette	INFO	Listening on port 33377
+Read port: 33377
+1681391848773	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1681391849048	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1681391951032	geckodriver	INFO	Listening on 127.0.0.1:36621
+1681391951502	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "54077" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilevPhBCV"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681391953521	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilevPhBCV/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54077/devtools/browser/c5e4e29b-6886-40f5-8f78-653ccd9e84da
+1681391957875	Marionette	INFO	Listening on port 34759
+Read port: 34759
+1681391957979	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_CommitBrowsingContextTransaction) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_CommitBrowsingContextTransaction) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_CommitWindowContextTransaction) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_CommitWindowContextTransaction) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_CommitBrowsingContextTransaction) Channel closing: too late to send/recv, messages will be lost
+
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1681391973444	Marionette	INFO	Stopped listening on port 34759
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1681391994425	geckodriver	INFO	Listening on 127.0.0.1:38145
+1681391994821	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "44103" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileV9mpoE"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681391996898	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileV9mpoE/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:44103/devtools/browser/aa5ee3bf-28a6-4b10-8cac-dcd09d1372e9
+1681392000994	Marionette	INFO	Listening on port 36275
+Read port: 36275
+1681392001182	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1681392009107	Marionette	INFO	Stopped listening on port 36275
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1681392203453	geckodriver	INFO	Listening on 127.0.0.1:57315
+1681392203850	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "46793" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilen63639"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681392205716	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilen63639/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:46793/devtools/browser/fda8dd8b-70e1-4a56-807a-2ec4a511f4e5
+1681392209817	Marionette	INFO	Listening on port 41389
+Read port: 41389
+1681392209955	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+1681392262090	geckodriver	INFO	Listening on 127.0.0.1:45495
+1681392262545	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "57167" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileB60Ogk"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681392267192	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileB60Ogk/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57167/devtools/browser/f70d50f9-1191-42e7-90ae-7e71e210f693
+1681392273588	Marionette	INFO	Listening on port 41119
+Read port: 41119
+1681392273809	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1681392301920	geckodriver	INFO	Listening on 127.0.0.1:57381
+1681392302284	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "40785" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileJFzkxJ"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681392306222	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileJFzkxJ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:40785/devtools/browser/7199abcb-6f75-44cc-87fd-f05cfa3aa886
+1681392314292	Marionette	INFO	Listening on port 39027
+Read port: 39027
+1681392314419	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+1681398592054	geckodriver	INFO	Listening on 127.0.0.1:43539
+1681398592453	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "38577" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileDprkup"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681398594374	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileDprkup/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:38577/devtools/browser/11dced09-f4ef-4a43-abc6-54913a545fff
+1681398596966	Marionette	INFO	Listening on port 44713
+Read port: 44713
+1681398597193	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+1681398667840	geckodriver	INFO	Listening on 127.0.0.1:39363
+1681398668224	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "52613" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileEcVtRC"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681398668565	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileEcVtRC/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52613/devtools/browser/2136aaff-d249-4850-8a6a-3b7c75ebc1fc
+1681398671155	Marionette	INFO	Listening on port 40787
+Read port: 40787
+1681398671381	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1681398741555	geckodriver	INFO	Listening on 127.0.0.1:36493
+1681398742057	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "42983" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilettY38D"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681398742716	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilettY38D/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:42983/devtools/browser/c363156c-a6f8-4631-ad79-398ae1880196
+1681398744714	Marionette	INFO	Listening on port 32983
+Read port: 32983
+1681398744934	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1681398782373	geckodriver	INFO	Listening on 127.0.0.1:47583
+1681398782877	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "43363" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileDcVzvZ"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681398783449	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileDcVzvZ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:43363/devtools/browser/52a96f8e-6b40-4710-b959-eb763d65b625
+1681398785251	Marionette	INFO	Listening on port 39723
+Read port: 39723
+1681398785405	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://staticfe.bamboohr.com/po/23.0413.084627-9cc46b5/index-393e22272b1882f040dd.js, line 2: ChunkLoadError: Loading chunk 5850 failed.
+(error: https://staticfe.bamboohr.com/po/23.0413.084627-9cc46b5/chunk-5850-54c3ddb6f1387f3a489e.js)
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1681398793171	Marionette	INFO	Stopped listening on port 39723
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][PCompositorManagerParent] Error: RunMessage(msgname=PCompositorBridge::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: 1681399740257	geckodriver	INFO	Listening on 127.0.0.1:47301
+1681399740659	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "38843" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileFIZdEg"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681399743148	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileFIZdEg/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:38843/devtools/browser/b5a4803b-4b59-4efc-9bd6-18a967d81d1c
+1681399747624	Marionette	INFO	Listening on port 38661
+Read port: 38661
+1681399747756	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1681399958666	geckodriver	INFO	Listening on 127.0.0.1:42203
+1681399959074	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "35549" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileBI08sI"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681399960201	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileBI08sI/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:35549/devtools/browser/7678eccb-86d4-46e0-ba7a-5982fff4314d
+1681399962607	Marionette	INFO	Listening on port 42293
+Read port: 42293
+1681399962727	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1681399969505	Marionette	INFO	Stopped listening on port 42293
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+=======
 1681118589563	geckodriver	INFO	Listening on 127.0.0.1:33027
 1681126445784	geckodriver	INFO	Listening on 127.0.0.1:41583
 1681126664126	geckodriver	INFO	Listening on 127.0.0.1:51235
@@ -3542,8 +4050,143 @@ DevTools listening on ws://127.0.0.1:50057/devtools/browser/2bbf931e-19f2-4cdb-a
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
 1681561351463	Marionette	INFO	Stopped listening on port 38089
+<<<<<<< HEAD
 Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
+=======
+>>>>>>> 6c3595208ad3160e6af4aa9398634bc260a71ad8
+1681723610920	geckodriver	INFO	Listening on 127.0.0.1:57349
+1681723664317	geckodriver	INFO	Listening on 127.0.0.1:54599
+1681723664822	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "35999" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilevvxOZU"
+Error: no DISPLAY environment variable specified
+1681723681947	geckodriver	INFO	Listening on 127.0.0.1:48527
+1681723682452	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "56649" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilefCokKp"
+Error: no DISPLAY environment variable specified
+1681723755497	geckodriver	INFO	Listening on 127.0.0.1:42313
+1681723756002	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "58915" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilejnSppD"
+Error: no DISPLAY environment variable specified
+1681723764843	geckodriver	INFO	Listening on 127.0.0.1:45481
+1681723765347	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "50555" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileN3bDVJ"
+Error: no DISPLAY environment variable specified
+1681724356146	geckodriver	INFO	Listening on 127.0.0.1:55331
+1681724356605	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "48299" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilep0ZQjb"
+Error: no DISPLAY environment variable specified
+1681724395090	geckodriver	INFO	Listening on 127.0.0.1:42985
+1681724395595	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "51777" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileurDyuU"
+Error: no DISPLAY environment variable specified
+1681724440502	geckodriver	INFO	Listening on 127.0.0.1:47011
+1681724441006	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "38955" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiledeX07C"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681724441666	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiledeX07C/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:38955/devtools/browser/47899ac0-1ea2-4789-8b98-24dfd1cd72a6
+1681724443562	Marionette	INFO	Listening on port 34195
+Read port: 34195
+1681724443647	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1681724526029	geckodriver	INFO	Listening on 127.0.0.1:54159
+1681724526534	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "43593" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileNHdaUc"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681724526833	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileNHdaUc/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:43593/devtools/browser/3aa69d18-8600-48ea-8433-ffe4a7fc28e1
+1681724528686	Marionette	INFO	Listening on port 46101
+Read port: 46101
+1681724528937	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: =Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header:  e°ÓÿÞ&ùb<mØ×Ê: - _processIncoming@chrome://remote/content/marionette/transport.js:414:17
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+1681725231359	geckodriver	INFO	Listening on 127.0.0.1:34469
+1681725231759	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "56809" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileoBAFcV"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libGL.so.1 missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1681725236096	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileoBAFcV/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56809/devtools/browser/66d849c4-aad3-4baf-bf49-bcdb00bc731b
+1681725241515	Marionette	INFO	Listening on port 45831
+Read port: 45831
+1681725241663	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1681725304318	Marionette	INFO	Stopped listening on port 45831
+>>>>>>> e2b0d0e8e111fb22f82a37a3cf228560ef059759
