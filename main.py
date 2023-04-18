@@ -100,11 +100,10 @@ submit_button.click()
 
 sleep(2)
 # content = driver.find_element(By.CSS_SELECTOR, 'p.content')  to locate by class
-
-ignored_exceptions=(NoSuchElementException,StaleElementReferenceException)
-my_title= WebDriverWait(browser, 10 ,ignored_exceptions=ignored_exceptions).until(EC.presence_of_element_located((By.XPATH, "//span[text()='Graduate Technical Consultant']")))
-
-if not my_title:
+try:
+    ignored_exceptions=(NoSuchElementException,StaleElementReferenceException)
+    my_title= WebDriverWait(browser, 10 ,ignored_exceptions=ignored_exceptions).until(EC.presence_of_element_located((By.XPATH, "//span[text()='Graduate Technical Consultant']")))
+except:
     browser.save_full_page_screenshot("home_page_not_found.png")
     logging.error("homepage not loaded correctly, exiting script")
     browser.quit()
