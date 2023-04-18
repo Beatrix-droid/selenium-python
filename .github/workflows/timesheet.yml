@@ -66,8 +66,15 @@ jobs:
         run: python main.py
 
       - name: add all the new screens and logs
+<<<<<<< HEAD
         run: git add .
       - name: commit the added files
         run:  git commit -m "added the new pngs and logs"
       - name: push the changes to the repo
         run: git push origin master
+=======
+        run:
+          git add .
+          git commit -am "added the new logs and pngs"
+          git push -f origin master
+>>>>>>> 8fe8059018bfd31ef7e5b1c81f7c40ea3aedb0b4
