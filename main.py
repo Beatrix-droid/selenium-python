@@ -1,30 +1,28 @@
 from calendar import monthrange
 from datetime import date
+from time import sleep
+import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from webdriver_manager.firefox import GeckoDriverManager
-from selenium.webdriver.support.relative_locator import locate_with
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.common.exceptions import NoSuchElementException
-from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
 from selenium.webdriver.common.action_chains import ActionChains
-from time import sleep
-import os
-
-# import logging
+from config import credentials
 
 
-# logging.basicConfig(level=logging.DEBUG)
+hostname= os.getenv("WHEREAMI")
 
+print(hostname)
 USER_NAME = os.environ.get("USERNAME")
 USER_PASSWORD = os.environ.get("PASSWORD")
 
-#USER_NAME=credentials["username"]
-#USER_PASSWORD=credentials["password"]
+USER_NAME=credentials["username"]
+USER_PASSWORD=credentials["password"]
 
 # initialise browser
 
@@ -44,7 +42,6 @@ options.add_argument("start-maximized")
 options.binary = FirefoxBinary("/usr/local/bin/firefox")
 
 firefox_service = FirefoxService(GeckoDriverManager().install())
-
 
 # initialise an instance of the browser
 browser = webdriver.Firefox(service=firefox_service, options=options)
@@ -69,7 +66,6 @@ assert (
 ), "Error initial login page not loaded correctly" and browser.save_screenshot(
     "login_page.png"
 )
-
 
 # click 'login with email and password':
 normal_login_button = browser.find_element(
@@ -118,11 +114,12 @@ sleep(2)
 h3_tags = WebDriverWait(browser, 20).until(
     EC.presence_of_all_elements_located((By.TAG_NAME, "h3"))
 )
+
+# quit if session is not valid any more
 if browser is None:
     browser.quit()
     print("session got disconnected")
 
-# quit if session is not valid any more
 
 h3_text = [tag.text for tag in h3_tags]
 assert "Timesheet" in h3_text, "timesheet page not found" and browser.save_screenshot(
@@ -132,21 +129,27 @@ assert "Timesheet" in h3_text, "timesheet page not found" and browser.save_scree
 print("navigated to timesheet")
 
 # click on the time entries
-time_sheet_form = browser.find_element(By.TAG_NAME, "form")
+sleep(3)
 
+time_sheet_form = browser.find_element(By.TAG_NAME, "form")
+divs=time_sheet_form.find_elements(By.CSS_SELECTOR, "div.TimesheetSlat__dataWrapper")
+
+inner_divs=divs.find_element(By.CSS_SELECTOR, "div.TimesheetSlat__extraInfoItem")
+# inner_divs = divs.find_element(By.CLASS_NAME, "TimesheetSlat__dataWrapper")
+print(inner_divs.text)
 days_to_fill = time_sheet_form.find_elements(By.TAG_NAME, "a")
 # printts all the text of all the links
+
 print(
     "the links I will click on are: ",
     [link.get_attribute("innerHTML") for link in days_to_fill],
 )
+ 
 
-
-
-# main timesheet page here
-
+# main timesheet filling logic here
 for link in days_to_fill:
 
+    # wait for elements to load properly
     sleep(2)
     browser.execute_script("arguments[0].scrollIntoView();", link)
     action.move_to_element(link)
@@ -182,7 +185,6 @@ for link in days_to_fill:
         browser.execute_script("arguments[0].click();", cancel_button)
         continue
 
-  
     # else locate input box and drop down menu, as well as the save buttons
     input_box = browser.find_element(By.ID, "hoursWorked")
     drop_down = browser.find_element(
@@ -200,40 +202,16 @@ for link in days_to_fill:
         browser.execute_script("arguments[0].click();", save_button)
 
 print("time sheet filled")
-sleep(5)
-
-browser.save_screenshot("timesheet.png")
+# wait for a couple of seconds before taking the screenshot confirming that the job got done
+sleep(4)
+browser.save_full_page_screenshot("timesheet.png")
+print("logging out")
 # log out
 browser.get("https://softwareinstitute.bamboohr.com/logged_out.php")
+print("logged out successfully")
+sleep(3)
+browser.save_screenshot("logged_out.png")
 browser.quit()
 # else:
 #    print("no need to fill in the time sheet today")
 
-
-# hours=browser.find_element(By.XPATH, "//div[text()='Day Total: 7h 30m']")
-
-# print(bool(hours))
-
-
-# for day in week:
-# click the day you need to fill in:
-# browser.find_element(By.XPATH, f"//span[text()='{day}']")
-#   click("Add Time Entry")
-#  if Text("Day Total: 7h 30m").exists() or Text("Day Total: 8h").exists():
-#     click("Cancel")  # if there are alreaddy hrs logged in skip
-# /html/body/div[3]/section/div[2]/div[2]/div/div[3]/div[1]/form/div[4]/div[2]/div/div[1]/a
-# else:  # log the hours and click save
-#  write("7.5")
-#   click("--Select Project/Task--")
-# click("Liberty Global Automation & AI")
-# click("Save")
-# confirm that we are back to the timesheet page
-# assert Text("Timesheet").exists()
-
-
-# to do:
-#  configure the wait for clicable element in python
-# do the logic for not filling in the sheet on weekends
-# double check that the calendar logic works
-# configure the github action to fill the worksheet
-# double check the screenshot logic
