@@ -12,17 +12,23 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
 from selenium.webdriver.common.action_chains import ActionChains
-from config import credentials
 
 
+
+#check where to get the env variables:
 hostname= os.getenv("WHEREAMI")
 
 print(hostname)
-USER_NAME = os.environ.get("USERNAME")
-USER_PASSWORD = os.environ.get("PASSWORD")
+if hostname=="LOCAL":
+    from config import credentials
+    USER_NAME=credentials["username"]
+    USER_PASSWORD=credentials["password"]
+else:
+    USER_NAME = os.environ.get("USERNAME")
+    USER_PASSWORD = os.environ.get("PASSWORD")
 
-USER_NAME=credentials["username"]
-USER_PASSWORD=credentials["password"]
+#USER_NAME=credentials["username"]
+#USER_PASSWORD=credentials["password"]
 
 # initialise browser
 
@@ -37,9 +43,9 @@ print("filling in the time sheet")
 
 # configure the browser driver
 options = FirefoxOptions()
-options.add_argument("--headless")
+#options.add_argument("--headless")
 options.add_argument("start-maximized")
-options.binary = FirefoxBinary("/usr/local/bin/firefox")
+options.binary = FirefoxBinary("/usr/bin/firefox")
 
 firefox_service = FirefoxService(GeckoDriverManager().install())
 
@@ -185,6 +191,7 @@ for link in days_to_fill:
         browser.execute_script("arguments[0].click();", cancel_button)
         continue
 
+  
     # else locate input box and drop down menu, as well as the save buttons
     input_box = browser.find_element(By.ID, "hoursWorked")
     drop_down = browser.find_element(
@@ -200,6 +207,7 @@ for link in days_to_fill:
         drop_down.click()
         department = browser.find_element(By.CSS_SELECTOR, ".fab-MenuOption__row").click()
         browser.execute_script("arguments[0].click();", save_button)
+
 
 print("time sheet filled")
 # wait for a couple of seconds before taking the screenshot confirming that the job got done
