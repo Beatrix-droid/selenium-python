@@ -10,19 +10,21 @@ jobs:
     name: open repo
     steps:
       - name: Check out this repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+            persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of the personal access token.
+            fetch-depth: 0  # otherwise, there would be errors pushing refs to the destination repository.
 
-      - name: Remove old logs from Geckodriver
-        run: rm -f *.log
-      - name: Remove old pngs
-        run: rm -f *.png
+      - name: Remove old logs and pngs
+        run: |
+          rm -f *.log
+          rm -f *.png
 
       - name: git add the removed files
         run: git add .
       - name: commit the removed files
         run:  git commit -m "removed old pngs and logs"
-      - name: push the changes to the repo
-        run: git push origin master
+
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -32,24 +34,23 @@ jobs:
       - name: Installed package list
         run: apt list --installed
 
-
       - name: Remove default firefox
         run: sudo rm -fr /opt/firefox
 
       - name: Install firefox 100.0.2
-        run: wget "http://ftp.mozilla.org/pub/firefox/releases/100.0.2/linux-x86_64/en-US/firefox-100.0.2.tar.bz2"
-      - name: extract firefox
-        run: sudo tar xjf firefox-*.tar.bz2
-
-      - name: remove unneeded compressed folder
-        run: sudo rm *.bz2
-
-      - name: move it into the /opt folder
-        run: sudo mv firefox /opt
-      - name: remove firefox executable in /bin
-        run: sudo rm /usr/bin/firefox
-      - name: create firefox executable
-        run: sudo ln -s /opt/firefox/firefox /usr/bin/firefox
+        run: |
+          echo "downloading firefox 100"
+          wget "http://ftp.mozilla.org/pub/firefox/releases/100.0.2/linux-x86_64/en-US/firefox-100.0.2.tar.bz2"
+          echo "extracting compressed file"
+          sudo tar xjf firefox-*.tar.bz2
+          echo "removing unneeded compressed file"
+          sudo rm *.bz2
+          echo "moving firefox"
+          sudo mv firefox /opt
+          echo "removing any existing firefox in /usr/bin"
+          sudo rm /usr/bin/firefox
+          echo "creating symbolic link"
+          sudo ln -s /opt/firefox/firefox /usr/bin/firefox
 
       - name: Install all the dependencies
         uses: py-actions/py-dependency-install@v4
@@ -65,16 +66,15 @@ jobs:
            PASSWORD: ${{ secrets.PASSWORD }}
         run: python main.py
 
-      - name: add all the new screens and logs
-<<<<<<< HEAD
-        run: git add .
-      - name: commit the added files
-        run:  git commit -m "added the new pngs and logs"
-      - name: push the changes to the repo
-        run: git push origin master
-=======
-        run:
-          git add .
-          git commit -am "added the new logs and pngs"
-          git push -f origin master
->>>>>>> 8fe8059018bfd31ef7e5b1c81f7c40ea3aedb0b4
+      - name: commit changes
+        uses: GuillaumeFalourd/git-commit-push@v1.3
+        with:
+          name: Beatrix-droid
+          commit_message: files committed by the github bot
+          target_branch: master
+          files: ./
+          remote_repository: https://github.com/Beatrix-droid/selenium-python
+          access_token: ${{ github.token }}
+          force: true
+          empty: true
+          tags: true

@@ -143,7 +143,6 @@ days_to_fill = time_sheet_form.find_elements(By.TAG_NAME, "a")
 
 logging.info(f"found {str(len(days_to_fill))} to click on. Starting to fill in the timesheet")
 
-
 # main timesheet page here
 
 for link in days_to_fill:
