@@ -3542,3 +3542,8 @@ DevTools listening on ws://127.0.0.1:50057/devtools/browser/2bbf931e-19f2-4cdb-a
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
 1681561351463	Marionette	INFO	Stopped listening on port 38089
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

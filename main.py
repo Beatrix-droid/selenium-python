@@ -193,7 +193,6 @@ for link in days_to_fill:
     browser.execute_script("arguments[0].click();", save_button)
 
 
-
 print("time sheet filled")
 sleep(2)
 
