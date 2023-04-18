@@ -214,3 +214,4 @@ Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
 1681830165288	Marionette	INFO	Stopped listening on port 37475
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
