@@ -22,10 +22,10 @@ jobs:
 
       - name: configure git and remove old files
         run : |
-          git config --global user.email "GithubBot@noreply.com"
-          git config --global user.name "Github Bot"
+          git config --local user.email "actions@github.com"
+          git config --local user.name "actions-user"
           git add .
-          git commit -m "removed old pngs and logs"
+
 
 
       - name: Set up Python
@@ -69,14 +69,10 @@ jobs:
         run: python main.py
 
       - name: commit changes
-        uses: GuillaumeFalourd/git-commit-push@v1.3
-        with:
-          name: Beatrix-droid
-          commit_message: files committed by the github bot
-          target_branch: master
-          files: ./
-          remote_repository: https://github.com/Beatrix-droid/selenium-python.git
-          access_token: ${{ github.token }}
-          force: true
-          empty: true
-          tags: true
+        run: |
+          git add .
+          git commit -m "adding new logs"
+          git push origin master
+        env:
+          REPO_KEY: ${{secrets.GITHUB_TOKEN}}
+          username: github-actions
