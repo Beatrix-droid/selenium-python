@@ -6,7 +6,7 @@ from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from webdriver_manager.firefox import GeckoDriverManager
-from selenium.webdriver.support.relative_locator import locate_with
+
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import StaleElementReferenceException
@@ -18,7 +18,7 @@ import logging
 
 
 # import logging
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.INFO,  format='%(asctime)s :: %(levelname)s :: %(message)s')
 
 # initialise browser
 
@@ -64,21 +64,21 @@ action = ActionChains(browser)
 # navigate to the login page
 browser.get("https://softwareinstitute.bamboohr.com/login.php")
 
-logging.info("navigated to the login form")
-
+logging.info("navigating to the login form")
+sleep(2)
 # check if login page has loaded correctly
 spans = browser.find_elements(By.TAG_NAME, "span")
 text_spans = [span.text for span in spans]
 
 page_has_loaded = bool("Log in with SAML" in text_spans)
 
-assert (
-    page_has_loaded
-), "Error initial login page not loaded correctly" and browser.save_screenshot(
-    "login_page.png"
-)
+if not page_has_loaded:
+    browser.save_full_page_screenshot("faulty_login.png")
+    logging.error("login page not loaded correctly, exiting script")
+    browser.quit()
+    quit()
 
-
+logging.info("navigated to login form")
 # click 'login with email and password':
 normal_login_button = browser.find_element(
     By.XPATH, "//button[contains(text(),'Log in with Email and Password')]"
@@ -89,12 +89,6 @@ email = browser.find_element(By.CSS_SELECTOR, "#lemail")
 password = browser.find_element(By.CSS_SELECTOR, "#password")
 submit_button = browser.find_element(By.XPATH, "//span[text()='Log In']")
 
-assert (
-    submit_button and password and email
-), "Error login form not loaded correctly" and browser.save_screenshot(
-    "no_submit_btn.png"
-)
-
 
 # type into form
 email.send_keys(USER_NAME)
@@ -104,16 +98,18 @@ password.send_keys(USER_PASSWORD)
 submit_button.click()
 
 
+sleep(2)
 # content = driver.find_element(By.CSS_SELECTOR, 'p.content')  to locate by class
-my_title = WebDriverWait(browser, 20).until(
-    EC.presence_of_element_located(
-        (By.XPATH, "//span[text()='Graduate Technical Consultant']")
-    )
-)
 
-assert my_title, " homepage not loaded correctly" and browser.save_screenshot(
-    "home_page_not_found.png"
-)
+ignored_exceptions=(NoSuchElementException,StaleElementReferenceException)
+my_title= WebDriverWait(browser, 10 ,ignored_exceptions=ignored_exceptions).until(EC.presence_of_element_located((By.XPATH, "//span[text()='Graduate Technical Consultant']")))
+
+if not my_title:
+    browser.save_full_page_screenshot("home_page_not_found.png")
+    logging.error("homepage not loaded correctly, exiting script")
+    browser.quit()
+    quit()
+
 logging.info("logged in")
 
 # locate my "my timesheet" button and click on it
@@ -123,19 +119,21 @@ my_timesheet.click()
 
 # check that we have navigated to the timesheet page:
 sleep(2)
-h3_tags = WebDriverWait(browser, 20).until(
-    EC.presence_of_all_elements_located((By.TAG_NAME, "h3"))
-)
-if browser is None:
-    browser.quit()
-    logging.error("session got disconnected")
+h3_tags = browser.find_elements(By.TAG_NAME, "h3")
 
 # quit if session is not valid any more
+if browser is None:
+    browser.quit()
+    logging.error("session got disconnected, terminating script")
+    quit()
+
 
 h3_text = [tag.text for tag in h3_tags]
-assert "Timesheet" in h3_text, "timesheet page not found" and browser.save_screenshot(
-    "timesheet_not_found.png"
-)
+if "Timesheet" not in h3_text:
+    logging.error("timehseet not loaded correctly")
+    browser.save_screenshot("timesheet_not_found.png")
+    browser.quit()
+    quit()
 
 logging.info("navigated to timesheet")
 

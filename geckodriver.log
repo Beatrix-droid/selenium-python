@@ -98,3 +98,118 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
 1681818343742	Marionette	INFO	Stopped listening on port 41029
 console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+1681818461444	Marionette	INFO	Stopped listening on port 45069
+1681827904606	geckodriver	INFO	Listening on 127.0.0.1:46449
+1681827904610	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "33479" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileIoXW1X"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1681827905100	Marionette	INFO	Marionette enabled
+1681827905104	Marionette	INFO	Listening on port 44853
+Read port: 44853
+WebDriver BiDi listening on ws://127.0.0.1:33479
+1681827905191	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileIoXW1X/search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:33479/devtools/browser/72e52624-8422-4629-b65c-8c38d30b5c07
+1681827996738	geckodriver	INFO	Listening on 127.0.0.1:52469
+1681827997244	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "46657" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile1YDWzI"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1681827997803	Marionette	INFO	Marionette enabled
+1681827997808	Marionette	INFO	Listening on port 39389
+Read port: 39389
+WebDriver BiDi listening on ws://127.0.0.1:46657
+1681827997900	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile1YDWzI/search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:46657/devtools/browser/d81deb6c-59fe-4069-a554-dca915f67cb6
+1681828061583	geckodriver	INFO	Listening on 127.0.0.1:57047
+1681828061587	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "37903" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile3vlvH9"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1681828062389	Marionette	INFO	Marionette enabled
+1681828062392	Marionette	INFO	Listening on port 34251
+WebDriver BiDi listening on ws://127.0.0.1:37903
+Read port: 34251
+1681828062718	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile3vlvH9/search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:37903/devtools/browser/82afa8ea-c6dd-45f5-9ddf-3ada32ba502c
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+1681828124938	Marionette	INFO	Stopped listening on port 34251
+console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+1681829284264	geckodriver	INFO	Listening on 127.0.0.1:60231
+1681829284770	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "43353" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileypy49t"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1681829285266	Marionette	INFO	Marionette enabled
+1681829285270	Marionette	INFO	Listening on port 34297
+Read port: 34297
+WebDriver BiDi listening on ws://127.0.0.1:43353
+1681829285374	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileypy49t/search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:43353/devtools/browser/cabbf60a-1cf8-48e0-a61c-e0d4e54168c3
+1681829329730	geckodriver	INFO	Listening on 127.0.0.1:41749
+1681829330236	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "36833" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilemkE9bL"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1681829331028	Marionette	INFO	Marionette enabled
+1681829331031	Marionette	INFO	Listening on port 37475
+Read port: 37475
+WebDriver BiDi listening on ws://127.0.0.1:36833
+1681829331134	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilemkE9bL/search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:36833/devtools/browser/fd6c5353-7fd6-4970-b551-5385c21befbe
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+1681830047815	geckodriver	INFO	Listening on 127.0.0.1:54191
+1681830047826	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ed" "--remote-debugging-port" "44055" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileMJJTsn"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1681830048598	Marionette	INFO	Marionette enabled
+1681830048602	Marionette	INFO	Listening on port 38023
+Read port: 38023
+WebDriver BiDi listening on ws://127.0.0.1:44055
+1681830048711	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileMJJTsn/search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:44055/devtools/browser/2c639402-808d-4bc7-82a2-0b44ba064319
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://softwareinstitute.bamboohr.com."
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
