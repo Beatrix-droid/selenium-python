@@ -67,5 +67,5 @@ jobs:
       - name: add all the new screens and logs
         run:
           git add .
-          git commit -m "added the new logs and pngs"
-          git push origin master
+          git commit -am "added the new logs and pngs"
+          git push -f origin master
