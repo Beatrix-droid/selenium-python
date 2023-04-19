@@ -102,8 +102,9 @@ submit_button.click()
 
 sleep(2)
 # content = driver.find_element(By.CSS_SELECTOR, 'p.content')  to locate by class
-titles=browser.find_elements(By.TAG_NAME, "span")
+titles=browser.execute_script('return document.getElementsByTagName("span")')
 timesheet_spans=[title.text for title in titles]
+logging.info(f"the elements found are: {timesheet_spans}")
 
 page_has_loaded = bool('Graduate Technical Consultant' in timesheet_spans)
 
