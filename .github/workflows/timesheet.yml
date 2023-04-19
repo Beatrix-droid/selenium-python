@@ -62,7 +62,6 @@ jobs:
         env:
            USERNAME: ${{ secrets.USERNAME }}
            PASSWORD: ${{ secrets.PASSWORD }}
-           WHEREAMI: CLOUD
         run: python main.py
 
       - name: commit changes
