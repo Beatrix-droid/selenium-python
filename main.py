@@ -35,7 +35,7 @@ logging.info("filling in the time sheet")
 # configure the browser driver
 options = FirefoxOptions()
 options.add_argument("start-maximized")
-options.binary = FirefoxBinary("/usr/bin/firefox")
+options.binary = FirefoxBinary("/usr/local/bin/firefox")
 
 firefox_service = FirefoxService(GeckoDriverManager().install())
 
@@ -46,6 +46,7 @@ if hostname=="LOCAL":
     from config import credentials
     USER_NAME=credentials["username"]
     USER_PASSWORD=credentials["password"]
+    options.add_argument("--headless")
 elif hostname=="CLOUD":
     USER_NAME = os.environ.get("USERNAME") #for production
     USER_PASSWORD = os.environ.get("PASSWORD")
@@ -100,10 +101,12 @@ submit_button.click()
 
 sleep(2)
 # content = driver.find_element(By.CSS_SELECTOR, 'p.content')  to locate by class
-try:
-    ignored_exceptions=(NoSuchElementException,StaleElementReferenceException)
-    my_title= WebDriverWait(browser, 10 ,ignored_exceptions=ignored_exceptions).until(EC.presence_of_element_located((By.XPATH, "//span[text()='Graduate Technical Consultant']")))
-except:
+titles=browser.find_elements(By.TAG_NAME, "span")
+timesheet_spans=[title.text for title in titles]
+
+page_has_loaded = bool('Graduate Technical Consultant' in timesheet_spans)
+
+if not page_has_loaded:
     browser.save_full_page_screenshot("home_page_not_found.png")
     logging.error("homepage not loaded correctly, exiting script")
     browser.quit()
