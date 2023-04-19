@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       WHEREAMI: CLOUD
+      USERNAME: ${{ secrets.USERNAME }}
+      PASSWORD: ${{ secrets.PASSWORD }}
     name: open repo
     steps:
       - name: Check out this repo
@@ -62,9 +64,6 @@ jobs:
           update-wheel: "false"
 
       - name: Run the automation script
-        env:
-           USERNAME: ${{ secrets.USERNAME }}
-           PASSWORD: ${{ secrets.PASSWORD }}
         run: python main.py
 
       - name: commit changes
