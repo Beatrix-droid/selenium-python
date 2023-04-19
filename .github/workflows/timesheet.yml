@@ -49,6 +49,8 @@ jobs:
           sudo rm /usr/bin/firefox
           echo "creating symbolic link"
           sudo ln -s /opt/firefox/firefox /usr/bin/firefox
+          echo "exportt env variable"
+          export WHEREAMI=CLOUD
 
       - name: Install all the dependencies
         uses: py-actions/py-dependency-install@v4
@@ -62,7 +64,6 @@ jobs:
         env:
            USERNAME: ${{ secrets.USERNAME }}
            PASSWORD: ${{ secrets.PASSWORD }}
-           WHEREAMI: CLOUD
         run: python main.py
 
       - name: commit changes
