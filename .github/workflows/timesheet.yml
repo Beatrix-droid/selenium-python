@@ -3,6 +3,10 @@ name: automate_time_sheet
 on: workflow_dispatch
   #schedule:
    # - cron:  '15 13 * * *'
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
 jobs:
   automate_time_sheet:
     runs-on: ubuntu-latest
