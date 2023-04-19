@@ -35,7 +35,7 @@ logging.info("filling in the time sheet")
 # configure the browser driver
 options = FirefoxOptions()
 options.add_argument("start-maximized")
-options.binary = FirefoxBinary("/usr/local/bin/firefox")
+options.binary = FirefoxBinary("/usr/bin/firefox")
 
 firefox_service = FirefoxService(GeckoDriverManager().install())
 
@@ -51,6 +51,7 @@ elif hostname=="CLOUD":
     USER_NAME = os.environ.get("USERNAME") #for production
     USER_PASSWORD = os.environ.get("PASSWORD")
     options.add_argument("--headless")
+    options.binary = FirefoxBinary("/usr/local/bin/firefox")
     logging.info("environment is prod, using local gh secrets and instantiating a headless browser")
 
 
