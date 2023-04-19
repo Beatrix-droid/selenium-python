@@ -41,6 +41,8 @@ firefox_service = FirefoxService(GeckoDriverManager().install())
 
 #check where to get the env variables, LOCAL is for development and debugging, else default to productions setup:
 hostname= os.getenv("WHEREAMI")
+
+logging.info("environment is:" + hostname)
 if hostname=="LOCAL":
     logging.info("environment is local, using local env variables")
     from config import credentials
