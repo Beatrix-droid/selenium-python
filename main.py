@@ -17,10 +17,9 @@ import os
 import logging
 
 
-# import logging
+# create the logging configuration
 logging.basicConfig(level=logging.INFO,  format='%(asctime)s :: %(levelname)s :: %(message)s')
 
-# initialise browser
 
 # check if it is friday or the end of the month:
 logging.info("starting the automation job")
@@ -43,17 +42,16 @@ firefox_service = FirefoxService(GeckoDriverManager().install())
 hostname= os.getenv("WHEREAMI")
 
 logging.info("environment is:" + hostname)
-if hostname=="LOCAL":
-    logging.info("environment is local, using local env variables")
+if hostname=="DEVELOPMENT":
+    logging.info("environment is the development environment, using local env variables")
     from config import credentials
     USER_NAME=credentials["username"]
     USER_PASSWORD=credentials["password"]
-    options.add_argument("--headless")
-elif hostname=="CLOUD":
+elif hostname=="PRODUCTION":
     USER_NAME = os.environ.get("USERNAME") #for production
     USER_PASSWORD = os.environ.get("PASSWORD")
     options.add_argument("--headless")
-    logging.info("environment is prod, using local gh secrets and instantiating a headless browser")
+    logging.info("environment is production, using repo gh secrets and instantiating a headless browser")
 
 
 
@@ -97,7 +95,6 @@ logging.info("form elements identified, inputting credentials")
 # type into form
 email.send_keys(USER_NAME)
 password.send_keys(USER_PASSWORD)
-logging.info(f"{len(USER_NAME)}+ {len(USER_PASSWORD)}")
 # Submit form
 submit_button.click()
 logging.info("submitted form")
@@ -109,6 +106,17 @@ timesheet_spans=[title.text for title in titles]
 logging.info(f"the elements found are: {timesheet_spans}")
 
 page_has_loaded = bool('Graduate Technical Consultant' in timesheet_spans)
+
+
+browser.get("https://softwareinstitute.bamboohr.com/employees/timesheet/?id=359&et_id=9569")
+
+#returns sick leave day or bank holiday days
+extra_items=browser.execute_script('return document.querySelectorAll("div.TimesheetSlat__extraInfoItem.TimesheetSlat__extraInfoItem--clockPush")')
+extra_text=[item.text for item in extra_items]
+print(extra_text)
+
+data=browser.execute_script('return document.querySelectorAll("div.TimesheetSlat__data")')
+print((len(data)))
 
 if not page_has_loaded:
     browser.save_full_page_screenshot("home_page_not_found.png")
