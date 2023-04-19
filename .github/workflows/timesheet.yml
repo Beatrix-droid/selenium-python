@@ -24,16 +24,6 @@ jobs:
           rm -f *.log
           rm -f *.png
 
-      - name: configure git and remove old files
-        run : |
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config user.name "github-actions[bot]"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN}}@github.com/Beatrix-droid/selenium-python
-          git add .
-          
-
-
-
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -76,10 +66,10 @@ jobs:
         run: python main.py
 
       - name: commit changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          default_author: github_actions
-          add: .
-          message: added new automation logs
-          committer_name: GitHub Actions
-          committer_email: actions@github.com
+      - uses: actions/checkout@v3
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "new logs generated"
+          git push
