@@ -24,7 +24,7 @@ jobs:
         run : |
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN}}@github.com/${GH_USERNAME}/selenium-python
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN}}@github.com/Beatrix-droid/selenium-python
           git add .
           
 
