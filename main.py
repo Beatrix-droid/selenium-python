@@ -213,12 +213,8 @@ if (current_day.strftime("%A")== "Friday") or (current_day.day==monthrange(curre
             logging.info("hours successfully entered, moved onto the next day")
 
 
-    logging.info("time sheet filled")
-    sleep(5)
-
-    browser.save_full_page_screenshot("timehseet.png")
-    logging.info("Screenshot with timesheet filled saved! Now logging out")
-    # log out and quit browser
+    logging.info("time sheet filled, now logging out!")
+    sleep(2)
 
     browser.get("https://softwareinstitute.bamboohr.com/logged_out.php")
     sleep(1)
