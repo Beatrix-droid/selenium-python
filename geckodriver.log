@@ -440,3 +440,24 @@ JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch res
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
 JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: No packet types for header: Error reading incoming packet: (Error: Failed to parse packet header! - _readHeader@chrome://remote/content/marionette/transport.js:471:13
+_processIncoming@chrome://remote/content/marionette/transport.js:405:19
+onInputStreamReady@chrome://remote/content/marionette/transport.js:368:14
+)
+Error reading incoming packet: (Error: No packet types for header: 
