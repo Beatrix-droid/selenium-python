@@ -10,7 +10,8 @@ permissions:
 jobs:
   automate_time_sheet:
     runs-on: ubuntu-latest
-    environment: production
+    env:
+      WHEREAMI: CLOUD
     name: open repo
     steps:
       - name: Check out this repo
