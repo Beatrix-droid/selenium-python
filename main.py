@@ -97,7 +97,7 @@ logging.info("form elements identified, inputting credentials")
 # type into form
 email.send_keys(USER_NAME)
 password.send_keys(USER_PASSWORD)
-logging.info(f"{USER_NAME}+ {USER_PASSWORD}")
+logging.info(f"{len(USER_NAME)}+ {len(USER_PASSWORD)}")
 # Submit form
 submit_button.click()
 logging.info("submitted form")
