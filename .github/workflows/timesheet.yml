@@ -17,11 +17,7 @@ jobs:
     name: open repo
     steps:
       - name: Check out this repo
-        uses: actions/checkout@v2
-        with:
-            persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of the personal access token.
-            fetch-depth: 0  # otherwise, there would be errors pushing refs to the destination repository.
-
+        uses: actions/checkout@v3
       - name: Remove old logs and pngs
         run: |
           rm -f *.log
@@ -67,14 +63,9 @@ jobs:
         run: python main.py
 
       - name: commit changes
-
         run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git add .
-          git commit -m "new logs generated"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          git commit -m "generated"
+          git push
