@@ -85,19 +85,20 @@ normal_login_button = browser.find_element(
     By.XPATH, "//button[contains(text(),'Log in with Email and Password')]"
 ).click()
 
+logging.info("identifying form elements")
 # identify login form and check that it has loaded correctly:
 email = browser.find_element(By.CSS_SELECTOR, "#lemail")
 password = browser.find_element(By.CSS_SELECTOR, "#password")
 submit_button = browser.find_element(By.XPATH, "//span[text()='Log In']")
 
-
+logging.info("form elements identified, inputting credentials")
 # type into form
 email.send_keys(USER_NAME)
 password.send_keys(USER_PASSWORD)
-
+logging.info(USER_NAME USER_PASSWORD)
 # Submit form
 submit_button.click()
-
+logging.info("submitted form")
 
 sleep(2)
 # content = driver.find_element(By.CSS_SELECTOR, 'p.content')  to locate by class
@@ -118,6 +119,7 @@ logging.info("logged in")
 # locate my "my timesheet" button and click on it
 my_timesheet = browser.find_element(By.LINK_TEXT, "My Timesheet")
 my_timesheet.click()
+logging.info("clicked the timesheet link")
 
 
 # check that we have navigated to the timesheet page:
