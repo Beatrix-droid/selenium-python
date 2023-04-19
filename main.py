@@ -46,7 +46,7 @@ if hostname=="LOCAL":
     from config import credentials
     USER_NAME=credentials["username"]
     USER_PASSWORD=credentials["password"]
-else:
+elif hostname=="CLOUD":
     USER_NAME = os.environ.get("USERNAME") #for production
     USER_PASSWORD = os.environ.get("PASSWORD")
     options.add_argument("--headless")
