@@ -24,7 +24,9 @@ jobs:
         run : |
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN}}@github.com/${GH_USERNAME}/selenium-python
           git add .
+          
 
 
 
@@ -66,6 +68,7 @@ jobs:
         env:
            USERNAME: ${{ secrets.USERNAME }}
            PASSWORD: ${{ secrets.PASSWORD }}
+           WHEREAMI: CLOUD
         run: python main.py
 
       - name: commit changes
@@ -73,8 +76,6 @@ jobs:
         with:
           default_author: github_actions
           add: .
-          new_branch:
           message: added new automation logs
           committer_name: GitHub Actions
           committer_email: actions@github.com
-          push: true
