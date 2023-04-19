@@ -51,7 +51,6 @@ elif hostname=="CLOUD":
     USER_NAME = os.environ.get("USERNAME") #for production
     USER_PASSWORD = os.environ.get("PASSWORD")
     options.add_argument("--headless")
-    options.binary = FirefoxBinary("/usr/local/bin/firefox")
     logging.info("environment is prod, using local gh secrets and instantiating a headless browser")
 
 
