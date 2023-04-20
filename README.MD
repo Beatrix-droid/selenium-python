@@ -10,6 +10,8 @@ The project is contains 3 files:
 
 * a _gitleaks-action.yaml_ that scans the repo every time a file is committed to it, outputting the findings in the logs. Gitleaks is a SAST tool for detecting and preventing hardcoded secrets like passwords, API keys, and tokens in git repos. It is used to ensure check that no sensitive data has been exposed by the robot or the user when files are committed to the repo.
 
+gitleaks action:
+[![gitleaks](https://github.com/Beatrix-droid/selenium-python/actions/workflows/gitleaks-action.yaml/badge.svg)](https://github.com/Beatrix-droid/selenium-python/actions/workflows/gitleaks-action.yaml)
 
 To use this robot to automate your timesheet, the only things that you need to do is fork this repo, and create two repository level secrets. One secret will be named USERNAME and will contain the username you use to access the portal. The other will be called PASSWORD and will contain the password used to enter the portal.GitHub Secrets are encrypted and allow you to store sensitive information, such as access tokens, in your repository. They are exposed only to selected actions and are not passed to workflows that are triggered by a pull request from a fork of this repository.
 
