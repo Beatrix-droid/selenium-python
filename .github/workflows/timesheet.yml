@@ -2,7 +2,7 @@
 name: automate_time_sheet
 on:
   schedule:
-    - cron:  '15 13 * * *'
+    - cron:  '0 11 * * *'
 jobs:
   automate_time_sheet:
     runs-on: ubuntu-latest
