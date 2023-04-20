@@ -44,7 +44,6 @@ jobs:
           sudo rm /usr/bin/firefox
           echo "creating symbolic link"
           sudo ln -s /opt/firefox/firefox /usr/bin/firefox
-          echo "exportt env variable"
 
       - name: Install all the dependencies
         uses: py-actions/py-dependency-install@v4
