@@ -1,7 +1,8 @@
 # Automate the TimeSheeet   
 [![automate_time_sheet](https://github.com/Beatrix-droid/selenium-python/actions/workflows/timesheet.yml/badge.svg)](https://github.com/Beatrix-droid/selenium-python/actions/workflows/timesheet.yml)
 
-This is a python robot built on selenium that fills in my time sheet each week.
+This is a python robot built on selenium that fills in my time sheet each week. The robot does not take into accoutn sick days and Bank holidays and will not request annual leave for you. Annual leave, bank holidays and sick leave need to be managed manually.
+
 The project is contains 3 files:
 
 * a _main.py_ script that utilises selenium to open a browser, log into the portal and fill in the timesheet, complete with logs that inform the user how the execution of the job proceeds, and screenshots pointing to the source of error in case the job fails. 
