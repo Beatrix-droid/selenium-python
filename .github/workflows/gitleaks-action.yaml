@@ -12,3 +12,6 @@ jobs:
       - uses: gitleaks/gitleaks-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: check output
+        if: steps.run.outputs.status == '0'
+        run: echo "action was successful"
