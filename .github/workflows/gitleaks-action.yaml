@@ -13,5 +13,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: check output
-        if: steps.run.outputs.status == '0'
-        run: echo "action was successful"
+        if: steps.run.outputs.status == '1'
+        run: echo "action failed, leaks found"
