@@ -10,7 +10,7 @@ jobs:
       WHEREAMI: PRODUCTION
       USERNAME: ${{ secrets.USERNAME }}
       PASSWORD: ${{ secrets.PASSWORD }}
-    name: open repo
+    name: fill in time sheet
     steps:
       - name: Check out this repo
         uses: actions/checkout@v3
