@@ -1,0 +1,20 @@
+1691140927335	geckodriver	INFO	Listening on 127.0.0.1:41897
+1691140927839	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "59897" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilectGBep"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL missing
+1691140928113	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilectGBep/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59897/devtools/browser/4b6eb44f-cd00-4a43-bf31-d4b842b0189e
+1691140929167	Marionette	INFO	Listening on port 40365
+Read port: 40365
+1691140929256	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1691140993148	Marionette	INFO	Stopped listening on port 40365
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
