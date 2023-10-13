@@ -1,0 +1,22 @@
+1697188987197	geckodriver	INFO	Listening on 127.0.0.1:42887
+1697188987702	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "59733" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileOBSg2q"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL missing
+1697188988354	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileOBSg2q/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59733/devtools/browser/9b140a6d-cad7-46a1-a9d8-01545440080b
+1697188989705	Marionette	INFO	Listening on port 46351
+Read port: 46351
+1697188989726	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1697188999749	Marionette	INFO	Stopped listening on port 46351
+
+###!!! [Parent][PCompositorManagerParent] Error: RunMessage(msgname=PCompositorBridge::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
