@@ -10,6 +10,7 @@ jobs:
       WHEREAMI: PRODUCTION
       USERNAME: ${{ secrets.USERNAME }}
       PASSWORD: ${{ secrets.PASSWORD }}
+      AGENT: ${{secrets.AGENT}}
     name: fill in time sheet
     steps:
       - name: Check out this repo
