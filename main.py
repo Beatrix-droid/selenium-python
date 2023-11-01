@@ -50,13 +50,17 @@ if (current_day.strftime("%A")== "Friday") or (current_day.day==monthrange(curre
     elif hostname=="PRODUCTION":
         USER_NAME = os.environ.get("USERNAME") #for production
         USER_PASSWORD = os.environ.get("PASSWORD")
+        AGENT=os.environ.get("AGENT")
         options.add_argument("--headless")
         logging.info("environment is production, using repo gh secrets and instantiating a headless browser")
 
 
-
+    # set the user agent
+    profile = webdriver.FirefoxProfile()
+    profile.set_preference("general.useragent.override", AGENT)
+    
     # initialise an instance of the browser
-    browser = webdriver.Firefox(service=firefox_service, options=options)
+    browser = webdriver.Firefox(profile,service=firefox_service, options=options)
     browser.implicitly_wait(10)  # change the default wait to 10
 
     # create action chain object
@@ -105,8 +109,14 @@ if (current_day.strftime("%A")== "Friday") or (current_day.day==monthrange(curre
     timesheet_spans=[title.text for title in titles]
     logging.info(f"the elements found are: {timesheet_spans}")
 
+    # see if the "trust this browser" element appears and click on it if it does
+    if 'Yes, Trust this Browser' in timesheet_spans:
+        #identify the trust this browser button
+        trust_browser=browser.find_element(By.XPATH,"//span[text()='Yes, Trust this Browser']")
+        trust_browser.click()
+        sleep(1)
+        
     page_has_loaded = bool('Graduate Technical Consultant' in timesheet_spans)
-
 
     if not page_has_loaded:
         browser.save_full_page_screenshot("home_page_not_found.png")
