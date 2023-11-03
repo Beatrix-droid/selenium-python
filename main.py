@@ -114,8 +114,12 @@ if (current_day.strftime("%A")== "Friday") or (current_day.day==monthrange(curre
         #identify the trust this browser button
         trust_browser=browser.find_element(By.XPATH,"//span[text()='Yes, Trust this Browser']")
         trust_browser.click()
+        logging.info("button to trust browser has been clicked")
         sleep(1)
-        
+
+    # attempt to get the spans again
+    titles=browser.execute_script('return document.getElementsByTagName("span")')
+    timesheet_spans=[title.text for title in titles]
     page_has_loaded = bool('Graduate Technical Consultant' in timesheet_spans)
 
     if not page_has_loaded:
