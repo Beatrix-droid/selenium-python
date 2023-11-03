@@ -1,19 +1,17 @@
-1699003372497	geckodriver	INFO	Listening on 127.0.0.1:47983
-1699003373003	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "33025" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileqSgLkz"
+1699005674690	geckodriver	INFO	Listening on 127.0.0.1:60967
+1699005675197	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "40445" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileY1qqqx"
 *** You are running in headless mode.
 [GFX1-]: glxtest: Unable to open a connection to the X server
 [GFX1-]: glxtest: libEGL missing
-1699003373404	Marionette	INFO	Marionette enabled
+1699005675438	Marionette	INFO	Marionette enabled
 [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileqSgLkz/search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:33025/devtools/browser/3889b22d-1d43-4873-a6ce-2f16202ff2cd
-1699003374688	Marionette	INFO	Listening on port 45097
-Read port: 45097
-1699003374728	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileY1qqqx/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:40445/devtools/browser/b55c4b62-0da6-4547-ba59-eefdff7a7148
+1699005676274	Marionette	INFO	Listening on port 40241
+Read port: 40241
+1699005676311	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://softwareinstitute.bamboohr.com"
 JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
-1699003386148	Marionette	INFO	Stopped listening on port 45097
-
-###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
-
+1699005685779	Marionette	INFO	Stopped listening on port 40241
+!!! error running onStopped callback: TypeError: callback is not a function
