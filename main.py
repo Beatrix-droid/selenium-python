@@ -125,6 +125,7 @@ if (current_day.strftime("%A")== "Friday") or (current_day.day==monthrange(curre
     if not page_has_loaded:
         browser.save_full_page_screenshot("home_page_not_found.png")
         logging.error("homepage not loaded correctly, exiting script")
+        browser.save_screenshot("error.png")
         browser.quit()
         quit()
 
