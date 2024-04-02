@@ -75,7 +75,7 @@ if (current_day.strftime("%A")== "Friday") or (current_day.day==monthrange(curre
     spans = browser.find_elements(By.TAG_NAME, "span")
     text_spans = [span.text for span in spans]
 
-    page_has_loaded = bool("Log in with SAML" in text_spans)
+    page_has_loaded = bool("Log in with Microsoft" in text_spans)
 
     if not page_has_loaded:
         browser.save_full_page_screenshot("faulty_login.png")
