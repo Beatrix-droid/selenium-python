@@ -1,0 +1,14 @@
+1715337071974	geckodriver	INFO	Listening on 127.0.0.1:37135
+1715337072481	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... ss" "--remote-debugging-port" "41315" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile5GcdQp"
+*** You are running in headless mode.
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL missing
+1715337072760	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile5GcdQp/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:41315/devtools/browser/fccfccc7-4873-409d-976a-9067a05888e4
+1715337073515	Marionette	INFO	Listening on port 37713
+Read port: 37713
+1715337073592	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1715337078248	Marionette	INFO	Stopped listening on port 37713
