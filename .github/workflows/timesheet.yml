@@ -1,8 +1,8 @@
 # use actionlint to debug yaml https://rhysd.github.io/actionlint/
 name: automate_time_sheet
 on:
-  schedule:
-    - cron:  '17 10 * * *'
+  schedule: workflow_dispatch
+  #  - cron:  '17 10 * * *'
 jobs:
   automate_time_sheet:
     runs-on: ubuntu-latest
